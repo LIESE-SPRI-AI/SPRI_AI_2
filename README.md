@@ -2,14 +2,6 @@
 
 ---
 
-# Acceso rápido a documentación
-
-[Open Documentation](docs/html/index.html)
-
----
-
----
-
 # Requisitos
 
 Antes de compilar el proyecto debes tener instalado:
