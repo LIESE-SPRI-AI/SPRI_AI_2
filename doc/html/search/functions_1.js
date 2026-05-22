@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['conv2d_5fcreate_0',['Conv2D_Create',['../conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677',1,'Conv2D_Create(int in_channels, int out_channels, int kernel_size, int stride, int padding):&#160;conv2d.c'],['../conv2d_8h.html#a489f5ef1a69d3044a14bbe60613fc677',1,'Conv2D_Create(int in_channels, int out_channels, int kernel_size, int stride, int padding):&#160;conv2d.c']]],
+  ['conv2d_5fdestroy_1',['Conv2D_Destroy',['../conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700',1,'Conv2D_Destroy(Conv2D *this):&#160;conv2d.c'],['../conv2d_8h.html#ac503e98f3f9b3d5c470d0206168bd700',1,'Conv2D_Destroy(Conv2D *this):&#160;conv2d.c']]],
+  ['conv2d_5fforward_2',['Conv2D_Forward',['../conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd',1,'Conv2D_Forward(Conv2D *this, Tensor *input):&#160;conv2d.c'],['../conv2d_8h.html#a42ed1332a0bc8a8ce73d791d289a4bcd',1,'Conv2D_Forward(Conv2D *this, Tensor *input):&#160;conv2d.c']]]
+];
