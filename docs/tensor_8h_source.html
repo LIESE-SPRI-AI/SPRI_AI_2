@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Archivo de código fuente inc/nn/tensor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('tensor_8h_source.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">tensor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="tensor_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef TENSOR_H</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define TENSOR_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="tensor_8h.html#ac80a3592e72fd96b772ee47a7d8e0d0a">   15</a></span><span class="preprocessor">#define DEBUG_MODE</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">   20</a></span><span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifdef DEBUG_MODE</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif </span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="struct_tensor.html">   35</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">channels</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">   45</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">   50</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_tensor.html#ae29ff8fb9b97811c2d7345126e54378f">   55</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_tensor.html#ae29ff8fb9b97811c2d7345126e54378f">size</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">   60</a></span>    <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> * <a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <a class="code hl_struct" href="struct_tensor.html">Tensor</a>;</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><a class="code hl_struct" href="struct_tensor.html">Tensor</a> * <a class="code hl_function" href="tensor_8h.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a>(<span class="keywordtype">int</span> c, <span class="keywordtype">int</span> h, <span class="keywordtype">int</span> w);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">void</span> <a class="code hl_function" href="tensor_8h.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(<a class="code hl_struct" href="struct_tensor.html">Tensor</a> * <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> <a class="code hl_function" href="tensor_8h.html#ad02a7aebcd6b95d9dab98ee0793a15de">Tensor_Get</a>(<a class="code hl_struct" href="struct_tensor.html">Tensor</a> * <span class="keyword">this</span>, <span class="keywordtype">int</span> c, <span class="keywordtype">int</span> h, <span class="keywordtype">int</span> w);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="keywordtype">void</span> <a class="code hl_function" href="tensor_8h.html#a89964c7fd452823861ba0809fc701f3e">Tensor_Set</a>(<a class="code hl_struct" href="struct_tensor.html">Tensor</a> * <span class="keyword">this</span>, <span class="keywordtype">int</span> c, <span class="keywordtype">int</span> h, <span class="keywordtype">int</span> w, <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> value);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><a class="code hl_struct" href="struct_tensor.html">Tensor</a>* <a class="code hl_function" href="tensor_8h.html#a0de64027775e97b51d756d7d7beecbbe">Tensor_Concat</a>(<a class="code hl_struct" href="struct_tensor.html">Tensor</a>* a, <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* b);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">    #ifdef DEBUG_MODE</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="tensor_8h.html#a937666fb20a6aea54659666f43da92f1">Tensor_Print</a>(<a class="code hl_struct" href="struct_tensor.html">Tensor</a> * <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="preprocessor">    #endif</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">tensor.h:36</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a417a683a9ebc3cd10b6ece69c5532d53"><div class="ttname"><a href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">Tensor::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Altura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">tensor.h:45</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a487e00f72c168bd457c766bee6508bc5"><div class="ttname"><a href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">Tensor::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Anchura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">tensor.h:50</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a9d21e7a0caa74369b6999d6f365e3f7d"><div class="ttname"><a href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">Tensor::data</a></div><div class="ttdeci">type * data</div><div class="ttdoc">Puntero a los datos del tensor.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">tensor.h:60</a></div></div>
+<div class="ttc" id="astruct_tensor_html_ad514507b11bacd1d4b502207841b30b2"><div class="ttname"><a href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">Tensor::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Número de canales del tensor.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">tensor.h:40</a></div></div>
+<div class="ttc" id="astruct_tensor_html_ae29ff8fb9b97811c2d7345126e54378f"><div class="ttname"><a href="struct_tensor.html#ae29ff8fb9b97811c2d7345126e54378f">Tensor::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Número total de elementos almacenados.</div><div class="ttdef"><b>Definition</b> <a href="#l00055">tensor.h:55</a></div></div>
+<div class="ttc" id="atensor_8h_html_a0de64027775e97b51d756d7d7beecbbe"><div class="ttname"><a href="tensor_8h.html#a0de64027775e97b51d756d7d7beecbbe">Tensor_Concat</a></div><div class="ttdeci">Tensor * Tensor_Concat(Tensor *a, Tensor *b)</div><div class="ttdoc">Concatena dos tensores sobre el eje de canales.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00075">tensor.c:75</a></div></div>
+<div class="ttc" id="atensor_8h_html_a663d96b7a459537aa21a8aa6aa5b441f"><div class="ttname"><a href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a></div><div class="ttdeci">float type</div><div class="ttdoc">Tipo de dato utilizado por el tensor.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">tensor.h:20</a></div></div>
+<div class="ttc" id="atensor_8h_html_a86cdfda666446e1d88312b5c3b682569"><div class="ttname"><a href="tensor_8h.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a></div><div class="ttdeci">void Tensor_Destroy(Tensor *this)</div><div class="ttdoc">Libera la memoria asociada a un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00030">tensor.c:30</a></div></div>
+<div class="ttc" id="atensor_8h_html_a89964c7fd452823861ba0809fc701f3e"><div class="ttname"><a href="tensor_8h.html#a89964c7fd452823861ba0809fc701f3e">Tensor_Set</a></div><div class="ttdeci">void Tensor_Set(Tensor *this, int c, int h, int w, type value)</div><div class="ttdoc">Modifica un elemento del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00046">tensor.c:46</a></div></div>
+<div class="ttc" id="atensor_8h_html_a937666fb20a6aea54659666f43da92f1"><div class="ttname"><a href="tensor_8h.html#a937666fb20a6aea54659666f43da92f1">Tensor_Print</a></div><div class="ttdeci">void Tensor_Print(Tensor *this)</div><div class="ttdoc">Imprime el contenido del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00054">tensor.c:54</a></div></div>
+<div class="ttc" id="atensor_8h_html_a9f850f5edc3894ad727e86a33129e304"><div class="ttname"><a href="tensor_8h.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a></div><div class="ttdeci">Tensor * Tensor_Create(int c, int h, int w)</div><div class="ttdoc">Crea e inicializa un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00004">tensor.c:4</a></div></div>
+<div class="ttc" id="atensor_8h_html_ad02a7aebcd6b95d9dab98ee0793a15de"><div class="ttname"><a href="tensor_8h.html#ad02a7aebcd6b95d9dab98ee0793a15de">Tensor_Get</a></div><div class="ttdeci">type Tensor_Get(Tensor *this, int c, int h, int w)</div><div class="ttdoc">Obtiene un elemento del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00039">tensor.c:39</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="dir_39ad8ae55e5e6bb8e5a72d2b575ac278.html">nn</a></li><li class="navelem"><a href="tensor_8h.html">tensor.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

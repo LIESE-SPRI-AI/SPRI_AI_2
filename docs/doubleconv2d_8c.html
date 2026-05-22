@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Referencia del archivo src/nn/doubleconv2d.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('doubleconv2d_8c.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo doubleconv2d.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="doubleconv2d_8h_source.html">nn/doubleconv2d.h</a>&quot;</code><br />
+</div>
+<p><a href="doubleconv2d_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a1f87e39f290dd2a7f0f96e79c3af9be0" id="r_a1f87e39f290dd2a7f0f96e79c3af9be0"><td class="memItemLeft"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1f87e39f290dd2a7f0f96e79c3af9be0">DoubleConv2D_Create</a> (int in_channels, int out_channels)</td></tr>
+<tr class="memdesc:a1f87e39f290dd2a7f0f96e79c3af9be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea e inicializa un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>.  <br /></td></tr>
+<tr class="memitem:aeb271a7f6c27ef05c59f685d1485c55c" id="r_aeb271a7f6c27ef05c59f685d1485c55c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb271a7f6c27ef05c59f685d1485c55c">DoubleConv2D_Destroy</a> (<a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *this)</td></tr>
+<tr class="memdesc:aeb271a7f6c27ef05c59f685d1485c55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria asociada a un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>.  <br /></td></tr>
+<tr class="memitem:aaf98af8e5fee3930b7431f55068773a7" id="r_aaf98af8e5fee3930b7431f55068773a7"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaf98af8e5fee3930b7431f55068773a7">DoubleConv2D_Forward</a> (<a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *this, <a class="el" href="struct_tensor.html">Tensor</a> *input)</td></tr>
+<tr class="memdesc:aaf98af8e5fee3930b7431f55068773a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la propagación hacia adelante del bloque.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a1f87e39f290dd2a7f0f96e79c3af9be0" name="a1f87e39f290dd2a7f0f96e79c3af9be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f87e39f290dd2a7f0f96e79c3af9be0">&#9670;&#160;</a></span>DoubleConv2D_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> * DoubleConv2D_Create </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>in_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>out_channels</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea e inicializa un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </p>
+<p>Inicializa dos capas convolucionales y sus respectivas capas Batch Normalization.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_channels</td><td>Número de canales de entrada. </td></tr>
+    <tr><td class="paramname">out_channels</td><td>Número de canales de salida.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a> creado. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error de memoria. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="doubleconv2d_8c_source.html#l00003">3</a> del archivo <a class="el" href="doubleconv2d_8c_source.html">doubleconv2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    3</span>                                                                    {</div>
+<div class="line"><span class="lineno">    4</span> </div>
+<div class="line"><span class="lineno">    5</span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <span class="keyword">this</span> = (<a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>));</div>
+<div class="line"><span class="lineno">    6</span> </div>
+<div class="line"><span class="lineno">    7</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>){</div>
+<div class="line"><span class="lineno">    8</span> </div>
+<div class="line"><span class="lineno">    9</span>        this-&gt;conv1 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(in_channels, out_channels, 3, 1, 1);</div>
+<div class="line"><span class="lineno">   10</span>        this-&gt;bn1   = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><span class="lineno">   11</span> </div>
+<div class="line"><span class="lineno">   12</span>        this-&gt;conv2 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(out_channels, out_channels, 3, 1, 1);</div>
+<div class="line"><span class="lineno">   13</span>        this-&gt;bn2   = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">if</span>(!this-&gt;conv1 || !this-&gt;bn1 || !this-&gt;conv2 || !this-&gt;bn2){</div>
+<div class="line"><span class="lineno">   16</span>            <a class="code hl_function" href="#aeb271a7f6c27ef05c59f685d1485c55c">DoubleConv2D_Destroy</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   17</span> </div>
+<div class="line"><span class="lineno">   18</span>            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   19</span>        }</div>
+<div class="line"><span class="lineno">   20</span>    }</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>    <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>}</div>
+<div class="ttc" id="abatchnorm2d_8c_html_a5e0ceb515ec274feecc67724a3ff3e68"><div class="ttname"><a href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a></div><div class="ttdeci">BatchNorm2D * BatchNorm2D_Create(int channels)</div><div class="ttdoc">Crea e inicializa una capa BatchNorm2D.</div><div class="ttdef"><b>Definition</b> <a href="batchnorm2d_8c_source.html#l00004">batchnorm2d.c:4</a></div></div>
+<div class="ttc" id="aconv2d_8c_html_a489f5ef1a69d3044a14bbe60613fc677"><div class="ttname"><a href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a></div><div class="ttdeci">Conv2D * Conv2D_Create(int in_channels, int out_channels, int kernel_size, int stride, int padding)</div><div class="ttdoc">Crea e inicializa una capa Conv2D.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00003">conv2d.c:3</a></div></div>
+<div class="ttc" id="adoubleconv2d_8c_html_aeb271a7f6c27ef05c59f685d1485c55c"><div class="ttname"><a href="#aeb271a7f6c27ef05c59f685d1485c55c">DoubleConv2D_Destroy</a></div><div class="ttdeci">void DoubleConv2D_Destroy(DoubleConv2D *this)</div><div class="ttdoc">Libera la memoria asociada a un bloque DoubleConv2D.</div><div class="ttdef"><b>Definition</b> <a href="doubleconv2d_8c_source.html#l00026">doubleconv2d.c:26</a></div></div>
+<div class="ttc" id="astruct_double_conv2_d_html"><div class="ttname"><a href="struct_double_conv2_d.html">DoubleConv2D</a></div><div class="ttdoc">Representa un bloque de doble convolución.</div><div class="ttdef"><b>Definition</b> <a href="doubleconv2d_8h_source.html#l00028">doubleconv2d.h:29</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeb271a7f6c27ef05c59f685d1485c55c" name="aeb271a7f6c27ef05c59f685d1485c55c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb271a7f6c27ef05c59f685d1485c55c">&#9670;&#160;</a></span>DoubleConv2D_Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DoubleConv2D_Destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera la memoria asociada a un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="doubleconv2d_8c_source.html#l00026">26</a> del archivo <a class="el" href="doubleconv2d_8c_source.html">doubleconv2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   27</span>{</div>
+<div class="line"><span class="lineno">   28</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>){</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;conv1);</div>
+<div class="line"><span class="lineno">   30</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn1);</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;conv2);</div>
+<div class="line"><span class="lineno">   33</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn2);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>        free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="line"><span class="lineno">   37</span>}</div>
+<div class="ttc" id="abatchnorm2d_8c_html_abc929084b71fdbb1f9f2340a52fff794"><div class="ttname"><a href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a></div><div class="ttdeci">void BatchNorm2D_Destroy(BatchNorm2D *this)</div><div class="ttdoc">Libera la memoria asociada a una capa BatchNorm2D.</div><div class="ttdef"><b>Definition</b> <a href="batchnorm2d_8c_source.html#l00046">batchnorm2d.c:46</a></div></div>
+<div class="ttc" id="aconv2d_8c_html_ac503e98f3f9b3d5c470d0206168bd700"><div class="ttname"><a href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a></div><div class="ttdeci">void Conv2D_Destroy(Conv2D *this)</div><div class="ttdoc">Libera la memoria asociada a una capa Conv2D.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00045">conv2d.c:45</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aaf98af8e5fee3930b7431f55068773a7" name="aaf98af8e5fee3930b7431f55068773a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf98af8e5fee3930b7431f55068773a7">&#9670;&#160;</a></span>DoubleConv2D_Forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * DoubleConv2D_Forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta la propagación hacia adelante del bloque. </p>
+<p>Aplica dos convoluciones consecutivas con Batch Normalization y activación ReLU.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </td></tr>
+    <tr><td class="paramname">input</td><td><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de entrada.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de salida procesado. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error durante la operación. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="doubleconv2d_8c_source.html#l00039">39</a> del archivo <a class="el" href="doubleconv2d_8c_source.html">doubleconv2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   39</span>                                                               {</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* x = <a class="code hl_function" href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a>(this-&gt;conv1, input);</div>
+<div class="line"><span class="lineno">   42</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn1, x);</div>
+<div class="line"><span class="lineno">   43</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(x);</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* y = <a class="code hl_function" href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a>(this-&gt;conv2, x);</div>
+<div class="line"><span class="lineno">   46</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn2, y);</div>
+<div class="line"><span class="lineno">   47</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(y);</div>
+<div class="line"><span class="lineno">   48</span> </div>
+<div class="line"><span class="lineno">   49</span>    <a class="code hl_function" href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(x);</div>
+<div class="line"><span class="lineno">   50</span> </div>
+<div class="line"><span class="lineno">   51</span>    <span class="keywordflow">return</span> y;</div>
+<div class="line"><span class="lineno">   52</span>    </div>
+<div class="line"><span class="lineno">   53</span>}</div>
+<div class="ttc" id="abatchnorm2d_8c_html_afc9d3f3f62c106f45787972d6aa97759"><div class="ttname"><a href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a></div><div class="ttdeci">void BatchNorm2D_Forward(BatchNorm2D *this, Tensor *x)</div><div class="ttdoc">Aplica Batch Normalization sobre un tensor.</div><div class="ttdef"><b>Definition</b> <a href="batchnorm2d_8c_source.html#l00061">batchnorm2d.c:61</a></div></div>
+<div class="ttc" id="aconv2d_8c_html_a42ed1332a0bc8a8ce73d791d289a4bcd"><div class="ttname"><a href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a></div><div class="ttdeci">Tensor * Conv2D_Forward(Conv2D *this, Tensor *input)</div><div class="ttdoc">Ejecuta la propagación de la convolución.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00056">conv2d.c:56</a></div></div>
+<div class="ttc" id="arelu_8c_html_abcc9691e8acc8ce9c3b7782bcb7ed16e"><div class="ttname"><a href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a></div><div class="ttdeci">void ReLU_Forward(Tensor *x)</div><div class="ttdoc">Aplica la función de activación ReLU sobre un tensor.</div><div class="ttdef"><b>Definition</b> <a href="relu_8c_source.html#l00003">relu.c:3</a></div></div>
+<div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
+<div class="ttc" id="atensor_8c_html_a86cdfda666446e1d88312b5c3b682569"><div class="ttname"><a href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a></div><div class="ttdeci">void Tensor_Destroy(Tensor *this)</div><div class="ttdoc">Libera la memoria asociada a un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00030">tensor.c:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li><li class="navelem"><a href="doubleconv2d_8c.html">doubleconv2d.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

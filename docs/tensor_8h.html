@@ -1,0 +1,556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Referencia del archivo inc/nn/tensor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('tensor_8h.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo tensor.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Definición de la estructura <a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> y operaciones básicas.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+</div>
+<p><a href="tensor_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:Tensor" id="r_Tensor"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_tensor.html">Tensor</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un tensor tridimensional.  <a href="struct_tensor.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ac80a3592e72fd96b772ee47a7d8e0d0a" id="r_ac80a3592e72fd96b772ee47a7d8e0d0a"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac80a3592e72fd96b772ee47a7d8e0d0a">DEBUG_MODE</a></td></tr>
+<tr class="memdesc:ac80a3592e72fd96b772ee47a7d8e0d0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Habilita funciones de depuración.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+typedefs</h2></td></tr>
+<tr class="memitem:a663d96b7a459537aa21a8aa6aa5b441f" id="r_a663d96b7a459537aa21a8aa6aa5b441f"><td class="memItemLeft">typedef float&#160;</td><td class="memItemRight"><a class="el" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a></td></tr>
+<tr class="memdesc:a663d96b7a459537aa21a8aa6aa5b441f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipo de dato utilizado por el tensor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a9f850f5edc3894ad727e86a33129e304" id="r_a9f850f5edc3894ad727e86a33129e304"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a> (int c, int h, int w)</td></tr>
+<tr class="memdesc:a9f850f5edc3894ad727e86a33129e304"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea e inicializa un tensor.  <br /></td></tr>
+<tr class="memitem:a86cdfda666446e1d88312b5c3b682569" id="r_a86cdfda666446e1d88312b5c3b682569"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a> (<a class="el" href="struct_tensor.html">Tensor</a> *this)</td></tr>
+<tr class="memdesc:a86cdfda666446e1d88312b5c3b682569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria asociada a un tensor.  <br /></td></tr>
+<tr class="memitem:ad02a7aebcd6b95d9dab98ee0793a15de" id="r_ad02a7aebcd6b95d9dab98ee0793a15de"><td class="memItemLeft"><a class="el" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad02a7aebcd6b95d9dab98ee0793a15de">Tensor_Get</a> (<a class="el" href="struct_tensor.html">Tensor</a> *this, int c, int h, int w)</td></tr>
+<tr class="memdesc:ad02a7aebcd6b95d9dab98ee0793a15de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene un elemento del tensor.  <br /></td></tr>
+<tr class="memitem:a89964c7fd452823861ba0809fc701f3e" id="r_a89964c7fd452823861ba0809fc701f3e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a89964c7fd452823861ba0809fc701f3e">Tensor_Set</a> (<a class="el" href="struct_tensor.html">Tensor</a> *this, int c, int h, int w, <a class="el" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a> value)</td></tr>
+<tr class="memdesc:a89964c7fd452823861ba0809fc701f3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica un elemento del tensor.  <br /></td></tr>
+<tr class="memitem:a0de64027775e97b51d756d7d7beecbbe" id="r_a0de64027775e97b51d756d7d7beecbbe"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0de64027775e97b51d756d7d7beecbbe">Tensor_Concat</a> (<a class="el" href="struct_tensor.html">Tensor</a> *a, <a class="el" href="struct_tensor.html">Tensor</a> *b)</td></tr>
+<tr class="memdesc:a0de64027775e97b51d756d7d7beecbbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatena dos tensores sobre el eje de canales.  <br /></td></tr>
+<tr class="memitem:a937666fb20a6aea54659666f43da92f1" id="r_a937666fb20a6aea54659666f43da92f1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a937666fb20a6aea54659666f43da92f1">Tensor_Print</a> (<a class="el" href="struct_tensor.html">Tensor</a> *this)</td></tr>
+<tr class="memdesc:a937666fb20a6aea54659666f43da92f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime el contenido del tensor.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Definición de la estructura <a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> y operaciones básicas. </p>
+<p>Este archivo contiene la definición de tensores multidimensionales utilizados en operaciones de redes neuronales y procesamiento numérico. </p>
+
+<p class="definition">Definición en el archivo <a class="el" href="tensor_8h_source.html">tensor.h</a>.</p>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Documentación de «define»</h2>
+<a id="ac80a3592e72fd96b772ee47a7d8e0d0a" name="ac80a3592e72fd96b772ee47a7d8e0d0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80a3592e72fd96b772ee47a7d8e0d0a">&#9670;&#160;</a></span>DEBUG_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DEBUG_MODE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Habilita funciones de depuración. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8h_source.html#l00015">15</a> del archivo <a class="el" href="tensor_8h_source.html">tensor.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Documentación de «typedef»</h2>
+<a id="a663d96b7a459537aa21a8aa6aa5b441f" name="a663d96b7a459537aa21a8aa6aa5b441f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a663d96b7a459537aa21a8aa6aa5b441f">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef float <a class="el" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tipo de dato utilizado por el tensor. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8h_source.html#l00020">20</a> del archivo <a class="el" href="tensor_8h_source.html">tensor.h</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a0de64027775e97b51d756d7d7beecbbe" name="a0de64027775e97b51d756d7d7beecbbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0de64027775e97b51d756d7d7beecbbe">&#9670;&#160;</a></span>Tensor_Concat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * Tensor_Concat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concatena dos tensores sobre el eje de canales. </p>
+<p>Ambos tensores deben tener la misma altura y anchura.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Primer tensor. </td></tr>
+    <tr><td class="paramname">b</td><td>Segundo tensor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Nuevo tensor concatenado. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si las dimensiones son incompatibles. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8c_source.html#l00075">75</a> del archivo <a class="el" href="tensor_8c_source.html">tensor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   75</span>                                            {</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>    <span class="keywordflow">if</span>(a-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a> != b-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a> || a-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>  != b-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>) {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   79</span>    }</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* output = <a class="code hl_function" href="tensor_8c.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a>( a-&gt;<a class="code hl_variable" href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">channels</a> + b-&gt;<a class="code hl_variable" href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">channels</a>, a-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a>,a-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>);</div>
+<div class="line"><span class="lineno">   82</span> </div>
+<div class="line"><span class="lineno">   83</span>    <span class="keywordflow">if</span>(!output) {</div>
+<div class="line"><span class="lineno">   84</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   85</span>    }</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    <a class="code hl_typedef" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* dst = output-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a>;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>    <a class="code hl_typedef" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* src = a-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a>;</div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_typedef" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* end = src + a-&gt;<a class="code hl_variable" href="struct_tensor.html#ae29ff8fb9b97811c2d7345126e54378f">size</a>;</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>    <span class="keywordflow">while</span>(src &lt; end) {</div>
+<div class="line"><span class="lineno">   93</span>        *dst++ = *src++;</div>
+<div class="line"><span class="lineno">   94</span>    }</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>    src = b-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a>;</div>
+<div class="line"><span class="lineno">   97</span>    end = src + b-&gt;<a class="code hl_variable" href="struct_tensor.html#ae29ff8fb9b97811c2d7345126e54378f">size</a>;</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">while</span>(src &lt; end) {</div>
+<div class="line"><span class="lineno">  100</span>        *dst++ = *src++;</div>
+<div class="line"><span class="lineno">  101</span>    }</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>    <span class="keywordflow">return</span> output;</div>
+<div class="line"><span class="lineno">  104</span>}</div>
+<div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a417a683a9ebc3cd10b6ece69c5532d53"><div class="ttname"><a href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">Tensor::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Altura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00045">tensor.h:45</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a487e00f72c168bd457c766bee6508bc5"><div class="ttname"><a href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">Tensor::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Anchura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00050">tensor.h:50</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a9d21e7a0caa74369b6999d6f365e3f7d"><div class="ttname"><a href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">Tensor::data</a></div><div class="ttdeci">type * data</div><div class="ttdoc">Puntero a los datos del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00060">tensor.h:60</a></div></div>
+<div class="ttc" id="astruct_tensor_html_ad514507b11bacd1d4b502207841b30b2"><div class="ttname"><a href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">Tensor::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Número de canales del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00040">tensor.h:40</a></div></div>
+<div class="ttc" id="astruct_tensor_html_ae29ff8fb9b97811c2d7345126e54378f"><div class="ttname"><a href="struct_tensor.html#ae29ff8fb9b97811c2d7345126e54378f">Tensor::size</a></div><div class="ttdeci">int size</div><div class="ttdoc">Número total de elementos almacenados.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00055">tensor.h:55</a></div></div>
+<div class="ttc" id="atensor_8c_html_a9f850f5edc3894ad727e86a33129e304"><div class="ttname"><a href="tensor_8c.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a></div><div class="ttdeci">Tensor * Tensor_Create(int c, int h, int w)</div><div class="ttdoc">Crea e inicializa un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00004">tensor.c:4</a></div></div>
+<div class="ttc" id="atensor_8h_html_a663d96b7a459537aa21a8aa6aa5b441f"><div class="ttname"><a href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a></div><div class="ttdeci">float type</div><div class="ttdoc">Tipo de dato utilizado por el tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00020">tensor.h:20</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9f850f5edc3894ad727e86a33129e304" name="a9f850f5edc3894ad727e86a33129e304"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f850f5edc3894ad727e86a33129e304">&#9670;&#160;</a></span>Tensor_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * Tensor_Create </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea e inicializa un tensor. </p>
+<p>Reserva memoria para la estructura y sus datos internos.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Número de canales. </td></tr>
+    <tr><td class="paramname">h</td><td>Altura del tensor. </td></tr>
+    <tr><td class="paramname">w</td><td>Anchura del tensor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al tensor creado. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error de memoria. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8c_source.html#l00004">4</a> del archivo <a class="el" href="tensor_8c_source.html">tensor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>                                           {</div>
+<div class="line"><span class="lineno">    5</span> </div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a> * <span class="keyword">this</span> = (<a class="code hl_struct" href="struct_tensor.html">Tensor</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_tensor.html">Tensor</a>));</div>
+<div class="line"><span class="lineno">    7</span> </div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">if</span>(!<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">    9</span>    {</div>
+<div class="line"><span class="lineno">   10</span>        free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="line"><span class="lineno">   13</span>    this-&gt;data = (<a class="code hl_typedef" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a>) * c * h * w);</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordflow">if</span>(!this-&gt;data)</div>
+<div class="line"><span class="lineno">   16</span>    {</div>
+<div class="line"><span class="lineno">   17</span>        free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   18</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   19</span>    }</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>    this-&gt;channels = c;</div>
+<div class="line"><span class="lineno">   22</span>    this-&gt;height   = h;</div>
+<div class="line"><span class="lineno">   23</span>    this-&gt;width    = w;</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>    this-&gt;size = c * h * w;</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>    <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   28</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a86cdfda666446e1d88312b5c3b682569" name="a86cdfda666446e1d88312b5c3b682569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86cdfda666446e1d88312b5c3b682569">&#9670;&#160;</a></span>Tensor_Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tensor_Destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera la memoria asociada a un tensor. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al tensor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8c_source.html#l00030">30</a> del archivo <a class="el" href="tensor_8c_source.html">tensor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   31</span>{</div>
+<div class="line"><span class="lineno">   32</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>)</div>
+<div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        free(this-&gt;data);</div>
+<div class="line"><span class="lineno">   35</span>        free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   36</span>    }</div>
+<div class="line"><span class="lineno">   37</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad02a7aebcd6b95d9dab98ee0793a15de" name="ad02a7aebcd6b95d9dab98ee0793a15de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02a7aebcd6b95d9dab98ee0793a15de">&#9670;&#160;</a></span>Tensor_Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a> Tensor_Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene un elemento del tensor. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al tensor. </td></tr>
+    <tr><td class="paramname">c</td><td>Índice del canal. </td></tr>
+    <tr><td class="paramname">h</td><td>Índice de altura. </td></tr>
+    <tr><td class="paramname">w</td><td>Índice de anchura.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Valor almacenado en la posición especificada. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8c_source.html#l00039">39</a> del archivo <a class="el" href="tensor_8c_source.html">tensor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   40</span>{</div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordtype">int</span> idx = c * this-&gt;height * this-&gt;width + h * this-&gt;width + w;</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">return</span> this-&gt;data[idx];</div>
+<div class="line"><span class="lineno">   44</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a937666fb20a6aea54659666f43da92f1" name="a937666fb20a6aea54659666f43da92f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a937666fb20a6aea54659666f43da92f1">&#9670;&#160;</a></span>Tensor_Print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tensor_Print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Imprime el contenido del tensor. </p>
+<p>Función disponible únicamente en modo depuración.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al tensor. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8c_source.html#l00054">54</a> del archivo <a class="el" href="tensor_8c_source.html">tensor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                {</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c = 0; c &lt; this-&gt;channels; c++){</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>        printf(<span class="stringliteral">&quot;Channel %d: \n&quot;</span>,c);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> h = 0; h &lt; this-&gt;height; h++)</div>
+<div class="line"><span class="lineno">   61</span>            {</div>
+<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> w = 0; w &lt; this-&gt;width; w++)</div>
+<div class="line"><span class="lineno">   63</span>                {</div>
+<div class="line"><span class="lineno">   64</span>                    printf(<span class="stringliteral">&quot;%8.8f,&quot;</span>, <a class="code hl_function" href="tensor_8c.html#ad02a7aebcd6b95d9dab98ee0793a15de">Tensor_Get</a>(<span class="keyword">this</span>, c, h, w));</div>
+<div class="line"><span class="lineno">   65</span>                }</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>                printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   68</span>            }</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>            printf(<span class="stringliteral">&quot;\n \n&quot;</span>);</div>
+<div class="line"><span class="lineno">   71</span>    }</div>
+<div class="line"><span class="lineno">   72</span>}</div>
+<div class="ttc" id="atensor_8c_html_ad02a7aebcd6b95d9dab98ee0793a15de"><div class="ttname"><a href="tensor_8c.html#ad02a7aebcd6b95d9dab98ee0793a15de">Tensor_Get</a></div><div class="ttdeci">type Tensor_Get(Tensor *this, int c, int h, int w)</div><div class="ttdoc">Obtiene un elemento del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00039">tensor.c:39</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a89964c7fd452823861ba0809fc701f3e" name="a89964c7fd452823861ba0809fc701f3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89964c7fd452823861ba0809fc701f3e">&#9670;&#160;</a></span>Tensor_Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tensor_Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a663d96b7a459537aa21a8aa6aa5b441f">type</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifica un elemento del tensor. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al tensor. </td></tr>
+    <tr><td class="paramname">c</td><td>Índice del canal. </td></tr>
+    <tr><td class="paramname">h</td><td>Índice de altura. </td></tr>
+    <tr><td class="paramname">w</td><td>Índice de anchura. </td></tr>
+    <tr><td class="paramname">value</td><td>Valor a almacenar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="tensor_8c_source.html#l00046">46</a> del archivo <a class="el" href="tensor_8c_source.html">tensor.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   47</span>{</div>
+<div class="line"><span class="lineno">   48</span>    <span class="keywordtype">int</span> idx = c * this-&gt;height * this-&gt;width + h * this-&gt;width + w;</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    this-&gt;data[idx] = value;</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="dir_39ad8ae55e5e6bb8e5a72d2b575ac278.html">nn</a></li><li class="navelem"><a href="tensor_8h.html">tensor.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

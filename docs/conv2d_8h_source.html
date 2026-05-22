@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Archivo de código fuente inc/nn/conv2d.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('conv2d_8h_source.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">conv2d.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="conv2d_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef CONV2D_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define CONV2D_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="tensor_8h.html">tensor.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_conv2_d.html">   22</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="struct_conv2_d.html#a10b6b430cd721ecfbc79d0a6fdd85d03">   27</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_conv2_d.html#a10b6b430cd721ecfbc79d0a6fdd85d03">in_channels</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_conv2_d.html#a1508f6e88d9d25ce4f44bdab209b5c76">   32</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_conv2_d.html#a1508f6e88d9d25ce4f44bdab209b5c76">out_channels</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="struct_conv2_d.html#afc3e2a6ac991f81abb34f6fbb5c0292e">   40</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_conv2_d.html#afc3e2a6ac991f81abb34f6fbb5c0292e">kernel_size</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="struct_conv2_d.html#aeeff348448a220adbba965b3ae9a3083">   45</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_conv2_d.html#aeeff348448a220adbba965b3ae9a3083">stride</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="struct_conv2_d.html#aaa0778202c4bba624b58cfc855d51ac8">   50</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_conv2_d.html#aaa0778202c4bba624b58cfc855d51ac8">padding</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_conv2_d.html#af5e26998778013ef35d669597a713420">   55</a></span>    <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* <a class="code hl_variable" href="struct_conv2_d.html#af5e26998778013ef35d669597a713420">weights</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_conv2_d.html#a6261067716e99e521c461fcd9c977135">   60</a></span>    <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* <a class="code hl_variable" href="struct_conv2_d.html#a6261067716e99e521c461fcd9c977135">bias</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <a class="code hl_struct" href="struct_conv2_d.html">Conv2D</a>;</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><a class="code hl_struct" href="struct_conv2_d.html">Conv2D</a>* <a class="code hl_function" href="conv2d_8h.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(<span class="keywordtype">int</span> in_channels,<span class="keywordtype">int</span> out_channels,<span class="keywordtype">int</span> kernel_size,<span class="keywordtype">int</span> stride,<span class="keywordtype">int</span> padding);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="keywordtype">void</span> <a class="code hl_function" href="conv2d_8h.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(<a class="code hl_struct" href="struct_conv2_d.html">Conv2D</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><a class="code hl_struct" href="struct_tensor.html">Tensor</a>* <a class="code hl_function" href="conv2d_8h.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a>( <a class="code hl_struct" href="struct_conv2_d.html">Conv2D</a>* <span class="keyword">this</span>, <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* input);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="ttc" id="aconv2d_8h_html_a42ed1332a0bc8a8ce73d791d289a4bcd"><div class="ttname"><a href="conv2d_8h.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a></div><div class="ttdeci">Tensor * Conv2D_Forward(Conv2D *this, Tensor *input)</div><div class="ttdoc">Ejecuta la propagación de la convolución.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00056">conv2d.c:56</a></div></div>
+<div class="ttc" id="aconv2d_8h_html_a489f5ef1a69d3044a14bbe60613fc677"><div class="ttname"><a href="conv2d_8h.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a></div><div class="ttdeci">Conv2D * Conv2D_Create(int in_channels, int out_channels, int kernel_size, int stride, int padding)</div><div class="ttdoc">Crea e inicializa una capa Conv2D.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00003">conv2d.c:3</a></div></div>
+<div class="ttc" id="aconv2d_8h_html_ac503e98f3f9b3d5c470d0206168bd700"><div class="ttname"><a href="conv2d_8h.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a></div><div class="ttdeci">void Conv2D_Destroy(Conv2D *this)</div><div class="ttdoc">Libera la memoria asociada a una capa Conv2D.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00045">conv2d.c:45</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html"><div class="ttname"><a href="struct_conv2_d.html">Conv2D</a></div><div class="ttdoc">Representa una capa de convolución 2D.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">conv2d.h:23</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html_a10b6b430cd721ecfbc79d0a6fdd85d03"><div class="ttname"><a href="struct_conv2_d.html#a10b6b430cd721ecfbc79d0a6fdd85d03">Conv2D::in_channels</a></div><div class="ttdeci">int in_channels</div><div class="ttdoc">Número de canales de entrada.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">conv2d.h:27</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html_a1508f6e88d9d25ce4f44bdab209b5c76"><div class="ttname"><a href="struct_conv2_d.html#a1508f6e88d9d25ce4f44bdab209b5c76">Conv2D::out_channels</a></div><div class="ttdeci">int out_channels</div><div class="ttdoc">Número de canales de salida.</div><div class="ttdef"><b>Definition</b> <a href="#l00032">conv2d.h:32</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html_a6261067716e99e521c461fcd9c977135"><div class="ttname"><a href="struct_conv2_d.html#a6261067716e99e521c461fcd9c977135">Conv2D::bias</a></div><div class="ttdeci">type * bias</div><div class="ttdoc">Arreglo de sesgos de la convolución.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">conv2d.h:60</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html_aaa0778202c4bba624b58cfc855d51ac8"><div class="ttname"><a href="struct_conv2_d.html#aaa0778202c4bba624b58cfc855d51ac8">Conv2D::padding</a></div><div class="ttdeci">int padding</div><div class="ttdoc">Cantidad de padding aplicado a la entrada.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">conv2d.h:50</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html_aeeff348448a220adbba965b3ae9a3083"><div class="ttname"><a href="struct_conv2_d.html#aeeff348448a220adbba965b3ae9a3083">Conv2D::stride</a></div><div class="ttdeci">int stride</div><div class="ttdoc">Paso de desplazamiento de la convolución.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">conv2d.h:45</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html_af5e26998778013ef35d669597a713420"><div class="ttname"><a href="struct_conv2_d.html#af5e26998778013ef35d669597a713420">Conv2D::weights</a></div><div class="ttdeci">type * weights</div><div class="ttdoc">Arreglo de pesos de la convolución.</div><div class="ttdef"><b>Definition</b> <a href="#l00055">conv2d.h:55</a></div></div>
+<div class="ttc" id="astruct_conv2_d_html_afc3e2a6ac991f81abb34f6fbb5c0292e"><div class="ttname"><a href="struct_conv2_d.html#afc3e2a6ac991f81abb34f6fbb5c0292e">Conv2D::kernel_size</a></div><div class="ttdeci">int kernel_size</div><div class="ttdoc">Tamaño del kernel convolucional.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">conv2d.h:40</a></div></div>
+<div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
+<div class="ttc" id="atensor_8h_html"><div class="ttname"><a href="tensor_8h.html">tensor.h</a></div><div class="ttdoc">Definición de la estructura Tensor y operaciones básicas.</div></div>
+<div class="ttc" id="atensor_8h_html_a663d96b7a459537aa21a8aa6aa5b441f"><div class="ttname"><a href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a></div><div class="ttdeci">float type</div><div class="ttdoc">Tipo de dato utilizado por el tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00020">tensor.h:20</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="dir_39ad8ae55e5e6bb8e5a72d2b575ac278.html">nn</a></li><li class="navelem"><a href="conv2d_8h.html">conv2d.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
