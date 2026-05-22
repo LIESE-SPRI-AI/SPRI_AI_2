@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WildFire: Referencia de la estructura Tensor</title>
+<title>WildFire: Referencia del archivo inc/nn/relu.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_tensor.html','','struct_tensor-members'); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('relu_8h.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -115,94 +115,51 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_tensor.
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Referencia de la estructura Tensor</div></div>
+  <div class="headertitle"><div class="title">Referencia del archivo relu.h</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="tensor_8h_source.html">tensor.h</a>&gt;</code></p>
+<p>Implementación de la función de activación ReLU.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="tensor_8h_source.html">tensor.h</a>&quot;</code><br />
+</div>
+<p><a href="relu_8h_source.html">Ir al código fuente de este archivo.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Atributos públicos</h2></td></tr>
-<tr class="memitem:ad514507b11bacd1d4b502207841b30b2" id="r_ad514507b11bacd1d4b502207841b30b2"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ad514507b11bacd1d4b502207841b30b2">channels</a></td></tr>
-<tr class="memitem:a417a683a9ebc3cd10b6ece69c5532d53" id="r_a417a683a9ebc3cd10b6ece69c5532d53"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a417a683a9ebc3cd10b6ece69c5532d53">height</a></td></tr>
-<tr class="memitem:a487e00f72c168bd457c766bee6508bc5" id="r_a487e00f72c168bd457c766bee6508bc5"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a487e00f72c168bd457c766bee6508bc5">width</a></td></tr>
-<tr class="memitem:ae29ff8fb9b97811c2d7345126e54378f" id="r_ae29ff8fb9b97811c2d7345126e54378f"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#ae29ff8fb9b97811c2d7345126e54378f">size</a></td></tr>
-<tr class="memitem:a9d21e7a0caa74369b6999d6f365e3f7d" id="r_a9d21e7a0caa74369b6999d6f365e3f7d"><td class="memItemLeft"><a class="el" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9d21e7a0caa74369b6999d6f365e3f7d">data</a></td></tr>
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:abcc9691e8acc8ce9c3b7782bcb7ed16e" id="r_abcc9691e8acc8ce9c3b7782bcb7ed16e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a> (<a class="el" href="struct_tensor.html">Tensor</a> *x)</td></tr>
+<tr class="memdesc:abcc9691e8acc8ce9c3b7782bcb7ed16e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aplica la función de activación ReLU sobre un tensor.  <br /></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
-<a id="ad514507b11bacd1d4b502207841b30b2" name="ad514507b11bacd1d4b502207841b30b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad514507b11bacd1d4b502207841b30b2">&#9670;&#160;</a></span>channels</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación de la función de activación ReLU. </p>
+<p>Este archivo contiene la declaración de la operación Rectified Linear Unit (ReLU) aplicada sobre tensores. </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="abcc9691e8acc8ce9c3b7782bcb7ed16e" name="abcc9691e8acc8ce9c3b7782bcb7ed16e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcc9691e8acc8ce9c3b7782bcb7ed16e">&#9670;&#160;</a></span>ReLU_Forward()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Tensor::channels</td>
+          <td class="memname">void ReLU_Forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a9d21e7a0caa74369b6999d6f365e3f7d" name="a9d21e7a0caa74369b6999d6f365e3f7d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d21e7a0caa74369b6999d6f365e3f7d">&#9670;&#160;</a></span>data</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* Tensor::data</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Aplica la función de activación ReLU sobre un tensor. </p>
+<p>La operación se realiza en el mismo tensor de entrada. Todos los valores negativos son reemplazados por cero.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de entrada y salida. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a417a683a9ebc3cd10b6ece69c5532d53" name="a417a683a9ebc3cd10b6ece69c5532d53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a417a683a9ebc3cd10b6ece69c5532d53">&#9670;&#160;</a></span>height</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Tensor::height</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae29ff8fb9b97811c2d7345126e54378f" name="ae29ff8fb9b97811c2d7345126e54378f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae29ff8fb9b97811c2d7345126e54378f">&#9670;&#160;</a></span>size</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Tensor::size</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a487e00f72c168bd457c766bee6508bc5" name="a487e00f72c168bd457c766bee6508bc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a487e00f72c168bd457c766bee6508bc5">&#9670;&#160;</a></span>width</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int Tensor::width</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
-<li>inc/nn/<a class="el" href="tensor_8h_source.html">tensor.h</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div id="page-nav" class="page-nav-panel">
@@ -216,7 +173,7 @@ Atributos públicos</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="struct_tensor.html">Tensor</a></li>
+    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="dir_39ad8ae55e5e6bb8e5a72d2b575ac278.html">nn</a></li><li class="navelem"><a href="relu_8h.html">relu.h</a></li>
     <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

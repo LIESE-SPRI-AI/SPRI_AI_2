@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WildFire: Referencia del archivo src/nn/batchnorm2d.c</title>
+<title>WildFire: Lista de clases</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('batchnorm2d_8c.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('annotated.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -115,87 +115,23 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('batchnorm2d_8c
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Referencia del archivo batchnorm2d.c</div></div>
+  <div class="headertitle"><div class="title">Lista de clases</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="batchnorm2d_8h_source.html">nn/batchnorm2d.h</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Funciones</h2></td></tr>
-<tr class="memitem:a5e0ceb515ec274feecc67724a3ff3e68" id="r_a5e0ceb515ec274feecc67724a3ff3e68"><td class="memItemLeft"><a class="el" href="struct_batch_norm2_d.html">BatchNorm2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a> (int channels)</td></tr>
-<tr class="memitem:abc929084b71fdbb1f9f2340a52fff794" id="r_abc929084b71fdbb1f9f2340a52fff794"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a> (<a class="el" href="struct_batch_norm2_d.html">BatchNorm2D</a> *this)</td></tr>
-<tr class="memitem:afc9d3f3f62c106f45787972d6aa97759" id="r_afc9d3f3f62c106f45787972d6aa97759"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a> (<a class="el" href="struct_batch_norm2_d.html">BatchNorm2D</a> *this, <a class="el" href="struct_tensor.html">Tensor</a> *x)</td></tr>
+<div class="textblock">Lista de clases, estructuras, uniones e interfaces con breves descripciones:</div><div class="directory">
+<table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_batch_norm2_d.html" target="_self">BatchNorm2D</a></td><td class="desc">Representa una capa de Batch Normalization 2D </td></tr>
+<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_conv2_d.html" target="_self">Conv2D</a></td><td class="desc">Representa una capa de convolución 2D </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_double_conv2_d.html" target="_self">DoubleConv2D</a></td><td class="desc">Representa un bloque de doble convolución </td></tr>
+<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="struct_tensor.html" target="_self">Tensor</a></td><td class="desc">Representa un tensor tridimensional </td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
-<a id="a5e0ceb515ec274feecc67724a3ff3e68" name="a5e0ceb515ec274feecc67724a3ff3e68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e0ceb515ec274feecc67724a3ff3e68">&#9670;&#160;</a></span>BatchNorm2D_Create()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_batch_norm2_d.html">BatchNorm2D</a> * BatchNorm2D_Create </td>
-          <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channels</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abc929084b71fdbb1f9f2340a52fff794" name="abc929084b71fdbb1f9f2340a52fff794"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc929084b71fdbb1f9f2340a52fff794">&#9670;&#160;</a></span>BatchNorm2D_Destroy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BatchNorm2D_Destroy </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_batch_norm2_d.html">BatchNorm2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afc9d3f3f62c106f45787972d6aa97759" name="afc9d3f3f62c106f45787972d6aa97759"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc9d3f3f62c106f45787972d6aa97759">&#9670;&#160;</a></span>BatchNorm2D_Forward()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BatchNorm2D_Forward </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_batch_norm2_d.html">BatchNorm2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
+</div><!-- directory -->
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li><li class="navelem"><a href="batchnorm2d_8c.html">batchnorm2d.c</a></li>
     <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

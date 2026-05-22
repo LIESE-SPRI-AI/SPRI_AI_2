@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WildFire: Referencia del archivo src/nn/relu.c</title>
+<title>WildFire: Archivo de código fuente inc/main.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('relu_8c.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('main_8h_source.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -115,47 +115,30 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('relu_8c.html',
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Referencia del archivo relu.c</div></div>
+  <div class="headertitle"><div class="title">main.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="relu_8h_source.html">nn/relu.h</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
-Funciones</h2></td></tr>
-<tr class="memitem:abcc9691e8acc8ce9c3b7782bcb7ed16e" id="r_abcc9691e8acc8ce9c3b7782bcb7ed16e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a> (<a class="el" href="struct_tensor.html">Tensor</a> *x)</td></tr>
-</table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
-<a id="abcc9691e8acc8ce9c3b7782bcb7ed16e" name="abcc9691e8acc8ce9c3b7782bcb7ed16e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcc9691e8acc8ce9c3b7782bcb7ed16e">&#9670;&#160;</a></span>ReLU_Forward()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ReLU_Forward </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<a href="main_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MAIN_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MAIN_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="conv2d_8h.html">nn/conv2d.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="batchnorm2d_8h.html">nn/batchnorm2d.h</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="relu_8h.html">nn/relu.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="doubleconv2d_8h.html">nn/doubleconv2d.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abatchnorm2d_8h_html"><div class="ttname"><a href="batchnorm2d_8h.html">batchnorm2d.h</a></div><div class="ttdoc">Definición de la capa Batch Normalization 2D.</div></div>
+<div class="ttc" id="aconv2d_8h_html"><div class="ttname"><a href="conv2d_8h.html">conv2d.h</a></div><div class="ttdoc">Definición de la capa de convolución 2D.</div></div>
+<div class="ttc" id="adoubleconv2d_8h_html"><div class="ttname"><a href="doubleconv2d_8h.html">doubleconv2d.h</a></div><div class="ttdoc">Definición del bloque Double Convolution 2D.</div></div>
+<div class="ttc" id="arelu_8h_html"><div class="ttname"><a href="relu_8h.html">relu.h</a></div><div class="ttdoc">Implementación de la función de activación ReLU.</div></div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div id="page-nav" class="page-nav-panel">
-<div id="page-nav-resize-handle"></div>
-<div id="page-nav-tree">
-<div id="page-nav-contents">
-</div><!-- page-nav-contents -->
-</div><!-- page-nav-tree -->
-</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li><li class="navelem"><a href="relu_8c.html">relu.c</a></li>
+    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="main_8h.html">main.h</a></li>
     <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

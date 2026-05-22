@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>WildFire: Referencia del archivo inc/nn/conv2d.h</title>
+<title>WildFire: Referencia del archivo inc/nn/doubleconv2d.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 </div>
 <script type="text/javascript">
-document.addEventListener('DOMContentLoaded',() => { initNavTree('conv2d_8h.html','',''); });
+document.addEventListener('DOMContentLoaded',() => { initNavTree('doubleconv2d_8h.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -115,81 +115,66 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('conv2d_8h.html
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">Referencia del archivo conv2d.h</div></div>
+  <div class="headertitle"><div class="title">Referencia del archivo doubleconv2d.h</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Definición de la capa de convolución 2D.  
+<p>Definición del bloque Double Convolution 2D.  
 <a href="#details">Más...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="tensor_8h_source.html">tensor.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="conv2d_8h_source.html">nn/conv2d.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="batchnorm2d_8h_source.html">nn/batchnorm2d.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="relu_8h_source.html">nn/relu.h</a>&quot;</code><br />
 </div>
-<p><a href="conv2d_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<p><a href="doubleconv2d_8h_source.html">Ir al código fuente de este archivo.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Clases</h2></td></tr>
-<tr class="memitem:Conv2D" id="r_Conv2D"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_conv2_d.html">Conv2D</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa una capa de convolución 2D.  <a href="struct_conv2_d.html#details">Más...</a><br /></td></tr>
+<tr class="memitem:DoubleConv2D" id="r_DoubleConv2D"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Representa un bloque de doble convolución.  <a href="struct_double_conv2_d.html#details">Más...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Funciones</h2></td></tr>
-<tr class="memitem:a489f5ef1a69d3044a14bbe60613fc677" id="r_a489f5ef1a69d3044a14bbe60613fc677"><td class="memItemLeft"><a class="el" href="struct_conv2_d.html">Conv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a> (int in_channels, int out_channels, int kernel_size, int stride, int padding)</td></tr>
-<tr class="memdesc:a489f5ef1a69d3044a14bbe60613fc677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea e inicializa una capa <a class="el" href="struct_conv2_d.html" title="Representa una capa de convolución 2D.">Conv2D</a>.  <br /></td></tr>
-<tr class="memitem:ac503e98f3f9b3d5c470d0206168bd700" id="r_ac503e98f3f9b3d5c470d0206168bd700"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a> (<a class="el" href="struct_conv2_d.html">Conv2D</a> *this)</td></tr>
-<tr class="memdesc:ac503e98f3f9b3d5c470d0206168bd700"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria asociada a una capa <a class="el" href="struct_conv2_d.html" title="Representa una capa de convolución 2D.">Conv2D</a>.  <br /></td></tr>
-<tr class="memitem:a42ed1332a0bc8a8ce73d791d289a4bcd" id="r_a42ed1332a0bc8a8ce73d791d289a4bcd"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a> (<a class="el" href="struct_conv2_d.html">Conv2D</a> *this, <a class="el" href="struct_tensor.html">Tensor</a> *input)</td></tr>
-<tr class="memdesc:a42ed1332a0bc8a8ce73d791d289a4bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la propagación de la convolución.  <br /></td></tr>
+<tr class="memitem:a1f87e39f290dd2a7f0f96e79c3af9be0" id="r_a1f87e39f290dd2a7f0f96e79c3af9be0"><td class="memItemLeft"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1f87e39f290dd2a7f0f96e79c3af9be0">DoubleConv2D_Create</a> (int in_channels, int out_channels)</td></tr>
+<tr class="memdesc:a1f87e39f290dd2a7f0f96e79c3af9be0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea e inicializa un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>.  <br /></td></tr>
+<tr class="memitem:aeb271a7f6c27ef05c59f685d1485c55c" id="r_aeb271a7f6c27ef05c59f685d1485c55c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeb271a7f6c27ef05c59f685d1485c55c">DoubleConv2D_Destroy</a> (<a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *this)</td></tr>
+<tr class="memdesc:aeb271a7f6c27ef05c59f685d1485c55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria asociada a un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>.  <br /></td></tr>
+<tr class="memitem:aaf98af8e5fee3930b7431f55068773a7" id="r_aaf98af8e5fee3930b7431f55068773a7"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaf98af8e5fee3930b7431f55068773a7">DoubleConv2D_Forward</a> (<a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *this, <a class="el" href="struct_tensor.html">Tensor</a> *input)</td></tr>
+<tr class="memdesc:aaf98af8e5fee3930b7431f55068773a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la propagación hacia adelante del bloque.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Definición de la capa de convolución 2D. </p>
-<p>Este archivo contiene la estructura y las funciones necesarias para crear, utilizar y destruir una capa convolucional 2D utilizada en redes neuronales. </p>
+<div class="textblock"><p>Definición del bloque Double Convolution 2D. </p>
+<p>Este archivo contiene la estructura y funciones necesarias para implementar un bloque compuesto por dos convoluciones consecutivas con Batch Normalization y activación ReLU. </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
-<a id="a489f5ef1a69d3044a14bbe60613fc677" name="a489f5ef1a69d3044a14bbe60613fc677"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a489f5ef1a69d3044a14bbe60613fc677">&#9670;&#160;</a></span>Conv2D_Create()</h2>
+<a id="a1f87e39f290dd2a7f0f96e79c3af9be0" name="a1f87e39f290dd2a7f0f96e79c3af9be0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f87e39f290dd2a7f0f96e79c3af9be0">&#9670;&#160;</a></span>DoubleConv2D_Create()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_conv2_d.html">Conv2D</a> * Conv2D_Create </td>
+          <td class="memname"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> * DoubleConv2D_Create </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>in_channels</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>out_channels</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>kernel_size</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>stride</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>padding</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>out_channels</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Crea e inicializa una capa <a class="el" href="struct_conv2_d.html" title="Representa una capa de convolución 2D.">Conv2D</a>. </p>
-<p>Reserva memoria para la estructura y sus parámetros internos.</p>
+<p>Crea e inicializa un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </p>
+<p>Inicializa dos capas convolucionales y sus respectivas capas Batch Normalization.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">in_channels</td><td>Número de canales de entrada. </td></tr>
-    <tr><td class="paramname">out_channels</td><td>Número de canales de salida. </td></tr>
-    <tr><td class="paramname">kernel_size</td><td>Tamaño del kernel. </td></tr>
-    <tr><td class="paramname">stride</td><td>Paso de convolución. </td></tr>
-    <tr><td class="paramname">padding</td><td>Padding aplicado a la entrada.</td></tr>
+    <tr><td class="paramname">out_channels</td><td>Número de canales de salida.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd>Puntero a la estructura <a class="el" href="struct_conv2_d.html" title="Representa una capa de convolución 2D.">Conv2D</a> creada. </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a> creado. </dd></dl>
 <dl class="retval"><dt>Valores devueltos</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>Si ocurre un error de memoria. </td></tr>
@@ -199,42 +184,41 @@ Funciones</h2></td></tr>
 
 </div>
 </div>
-<a id="ac503e98f3f9b3d5c470d0206168bd700" name="ac503e98f3f9b3d5c470d0206168bd700"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac503e98f3f9b3d5c470d0206168bd700">&#9670;&#160;</a></span>Conv2D_Destroy()</h2>
+<a id="aeb271a7f6c27ef05c59f685d1485c55c" name="aeb271a7f6c27ef05c59f685d1485c55c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb271a7f6c27ef05c59f685d1485c55c">&#9670;&#160;</a></span>DoubleConv2D_Destroy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Conv2D_Destroy </td>
+          <td class="memname">void DoubleConv2D_Destroy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_conv2_d.html">Conv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Libera la memoria asociada a una capa <a class="el" href="struct_conv2_d.html" title="Representa una capa de convolución 2D.">Conv2D</a>. </p>
-<p>También libera los pesos y sesgos almacenados.</p>
+<p>Libera la memoria asociada a un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">this</td><td>Puntero a la capa <a class="el" href="struct_conv2_d.html" title="Representa una capa de convolución 2D.">Conv2D</a>. </td></tr>
+    <tr><td class="paramname">this</td><td>Puntero al bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a42ed1332a0bc8a8ce73d791d289a4bcd" name="a42ed1332a0bc8a8ce73d791d289a4bcd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42ed1332a0bc8a8ce73d791d289a4bcd">&#9670;&#160;</a></span>Conv2D_Forward()</h2>
+<a id="aaf98af8e5fee3930b7431f55068773a7" name="aaf98af8e5fee3930b7431f55068773a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf98af8e5fee3930b7431f55068773a7">&#9670;&#160;</a></span>DoubleConv2D_Forward()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * Conv2D_Forward </td>
+          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * DoubleConv2D_Forward </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_conv2_d.html">Conv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -244,16 +228,16 @@ Funciones</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ejecuta la propagación de la convolución. </p>
-<p>Aplica la operación convolucional sobre el tensor de entrada utilizando los pesos y sesgos de la capa.</p>
+<p>Ejecuta la propagación hacia adelante del bloque. </p>
+<p>Aplica dos convoluciones consecutivas con Batch Normalization y activación ReLU.</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">this</td><td>Puntero a la capa <a class="el" href="struct_conv2_d.html" title="Representa una capa de convolución 2D.">Conv2D</a>. </td></tr>
-    <tr><td class="paramname">input</td><td><a class="el" href="struct_tensor.html">Tensor</a> de entrada.</td></tr>
+    <tr><td class="paramname">this</td><td>Puntero al bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>. </td></tr>
+    <tr><td class="paramname">input</td><td><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de entrada.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_tensor.html">Tensor</a> de salida generado por la convolución. </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de salida procesado. </dd></dl>
 <dl class="retval"><dt>Valores devueltos</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>Si ocurre un error durante la operación. </td></tr>
@@ -276,7 +260,7 @@ Funciones</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="dir_39ad8ae55e5e6bb8e5a72d2b575ac278.html">nn</a></li><li class="navelem"><a href="conv2d_8h.html">conv2d.h</a></li>
+    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="dir_39ad8ae55e5e6bb8e5a72d2b575ac278.html">nn</a></li><li class="navelem"><a href="doubleconv2d_8h.html">doubleconv2d.h</a></li>
     <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

@@ -119,18 +119,30 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_batch_n
 </div><!--header-->
 <div class="contents">
 
+<p>Representa una capa de Batch Normalization 2D.  
+ <a href="#details">Más...</a></p>
+
 <p><code>#include &lt;<a class="el" href="batchnorm2d_8h_source.html">batchnorm2d.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Atributos públicos</h2></td></tr>
 <tr class="memitem:a96b8200a434f248d6b3a6dbeec39e732" id="r_a96b8200a434f248d6b3a6dbeec39e732"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a96b8200a434f248d6b3a6dbeec39e732">channels</a></td></tr>
+<tr class="memdesc:a96b8200a434f248d6b3a6dbeec39e732"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número de canales del tensor.  <br /></td></tr>
 <tr class="memitem:a66eae3cd0060c3e740cdcb7c07b176dd" id="r_a66eae3cd0060c3e740cdcb7c07b176dd"><td class="memItemLeft"><a class="el" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a66eae3cd0060c3e740cdcb7c07b176dd">weight</a></td></tr>
+<tr class="memdesc:a66eae3cd0060c3e740cdcb7c07b176dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parámetros de escala por canal.  <br /></td></tr>
 <tr class="memitem:a4735dc05023b8f95e3ded584ea4844ff" id="r_a4735dc05023b8f95e3ded584ea4844ff"><td class="memItemLeft"><a class="el" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4735dc05023b8f95e3ded584ea4844ff">bias</a></td></tr>
+<tr class="memdesc:a4735dc05023b8f95e3ded584ea4844ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parámetros de desplazamiento por canal.  <br /></td></tr>
 <tr class="memitem:a8a79cf5e38bd06df07afce9ad434ab13" id="r_a8a79cf5e38bd06df07afce9ad434ab13"><td class="memItemLeft"><a class="el" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a8a79cf5e38bd06df07afce9ad434ab13">running_mean</a></td></tr>
+<tr class="memdesc:a8a79cf5e38bd06df07afce9ad434ab13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Media acumulada por canal.  <br /></td></tr>
 <tr class="memitem:a26b8290f76c6ef36bcd588142cae0c57" id="r_a26b8290f76c6ef36bcd588142cae0c57"><td class="memItemLeft"><a class="el" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a26b8290f76c6ef36bcd588142cae0c57">running_variance</a></td></tr>
+<tr class="memdesc:a26b8290f76c6ef36bcd588142cae0c57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Varianza acumulada por canal.  <br /></td></tr>
 <tr class="memitem:a4bd3ad65ef63b3c3be517d66889d2141" id="r_a4bd3ad65ef63b3c3be517d66889d2141"><td class="memItemLeft"><a class="el" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4bd3ad65ef63b3c3be517d66889d2141">epsilon</a></td></tr>
+<tr class="memdesc:a4bd3ad65ef63b3c3be517d66889d2141"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valor pequeño utilizado para estabilidad numérica.  <br /></td></tr>
 </table>
-<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Representa una capa de Batch Normalization 2D. </p>
+<p>La capa almacena parámetros aprendibles y estadísticas utilizadas para normalizar activaciones por canal. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
 <a id="a4735dc05023b8f95e3ded584ea4844ff" name="a4735dc05023b8f95e3ded584ea4844ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4735dc05023b8f95e3ded584ea4844ff">&#9670;&#160;</a></span>bias</h2>
 
@@ -142,6 +154,8 @@ Atributos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Parámetros de desplazamiento por canal. </p>
 
 </div>
 </div>
@@ -157,6 +171,8 @@ Atributos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Número de canales del tensor. </p>
+
 </div>
 </div>
 <a id="a4bd3ad65ef63b3c3be517d66889d2141" name="a4bd3ad65ef63b3c3be517d66889d2141"></a>
@@ -170,6 +186,8 @@ Atributos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Valor pequeño utilizado para estabilidad numérica. </p>
 
 </div>
 </div>
@@ -185,6 +203,8 @@ Atributos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Media acumulada por canal. </p>
+
 </div>
 </div>
 <a id="a26b8290f76c6ef36bcd588142cae0c57" name="a26b8290f76c6ef36bcd588142cae0c57"></a>
@@ -199,6 +219,8 @@ Atributos públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Varianza acumulada por canal. </p>
+
 </div>
 </div>
 <a id="a66eae3cd0060c3e740cdcb7c07b176dd" name="a66eae3cd0060c3e740cdcb7c07b176dd"></a>
@@ -212,6 +234,8 @@ Atributos públicos</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Parámetros de escala por canal. </p>
 
 </div>
 </div>
