@@ -69,7 +69,7 @@ Tensor* Conv2D_Forward(Conv2D* this, Tensor* input)
     int output_channel_size = out_height * out_width;
     int kernel_channel_size = this->kernel_size * this->kernel_size;
 
-    //#pragma omp parallel for
+    #pragma omp parallel for
     for(int oc = 0; oc < this->out_channels; oc++)
     {
         type* output_ptr = output->data + oc * output_channel_size;

@@ -11,6 +11,8 @@ add_executable(app
     src/nn/batchnorm2d.c
     src/nn/relu.c
     src/nn/doubleconv2d.c
+    src/nn/maxpool2d.c
+    src/nn/convtranspose2d.c
 )
 
 target_include_directories(app PRIVATE inc)

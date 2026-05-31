@@ -1,7 +1,7 @@
 /**
  * @file tensor.h
  * @brief Definición de la estructura Tensor y operaciones básicas.
- *
+ * @author Guillermo Ocaña
  * Este archivo contiene la definición de tensores multidimensionales
  * utilizados en operaciones de redes neuronales y procesamiento numérico.
  */
@@ -130,5 +130,9 @@ Tensor* Tensor_Concat(Tensor* a, Tensor* b);
     void Tensor_Print(Tensor * this);
 
     #endif
+
+void Tensor_LoadImage(Tensor* this, char* path);
+
+
 
 #endif
