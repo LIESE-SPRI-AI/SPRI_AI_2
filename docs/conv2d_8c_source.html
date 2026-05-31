@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">int</span> output_channel_size = out_height * out_width;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">int</span> kernel_channel_size = this-&gt;kernel_size * this-&gt;kernel_size;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">//#pragma omp parallel for</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">    #pragma omp parallel for</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> oc = 0; oc &lt; this-&gt;out_channels; oc++)</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* output_ptr = output-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a> + oc * output_channel_size;</div>

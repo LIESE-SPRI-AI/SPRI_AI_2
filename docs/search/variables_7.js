@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['out_5fchannels_0',['out_channels',['../struct_conv2_d.html#a1508f6e88d9d25ce4f44bdab209b5c76',1,'Conv2D']]]
+  ['out_5fchannels_0',['out_channels',['../struct_conv2_d.html#a1508f6e88d9d25ce4f44bdab209b5c76',1,'Conv2D::out_channels'],['../struct_conv_transpose2_d.html#a67f92dcda029bec0d3ca6fb83b3c087f',1,'ConvTranspose2D::out_channels']]]
 ];

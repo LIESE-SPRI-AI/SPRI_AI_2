@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Referencia del archivo src/nn/maxpool2d.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('maxpool2d_8c.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo maxpool2d.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="maxpool2d_8h_source.html">nn/maxpool2d.h</a>&quot;</code><br />
+</div>
+<p><a href="maxpool2d_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a241ed68cfef1784369a865976f39b3cd" id="r_a241ed68cfef1784369a865976f39b3cd"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a241ed68cfef1784369a865976f39b3cd">MaxPool2D_Forward</a> (<a class="el" href="struct_tensor.html">Tensor</a> *input)</td></tr>
+<tr class="memdesc:a241ed68cfef1784369a865976f39b3cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aplica una operación Max Pooling 2D sobre un tensor.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a241ed68cfef1784369a865976f39b3cd" name="a241ed68cfef1784369a865976f39b3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a241ed68cfef1784369a865976f39b3cd">&#9670;&#160;</a></span>MaxPool2D_Forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * MaxPool2D_Forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aplica una operación Max Pooling 2D sobre un tensor. </p>
+<p>Para cada región de pooling, se selecciona el valor máximo, reduciendo las dimensiones espaciales del tensor de entrada.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de entrada.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> resultante después de la operación de Max Pooling. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error durante la operación. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="maxpool2d_8c_source.html#l00003">3</a> del archivo <a class="el" href="maxpool2d_8c_source.html">maxpool2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    3</span>                                         {</div>
+<div class="line"><span class="lineno">    4</span> </div>
+<div class="line"><span class="lineno">    5</span>    <span class="keywordtype">int</span> out_height = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a> / 2;</div>
+<div class="line"><span class="lineno">    6</span>    <span class="keywordtype">int</span> out_width  = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>  / 2;</div>
+<div class="line"><span class="lineno">    7</span> </div>
+<div class="line"><span class="lineno">    8</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* output = <a class="code hl_function" href="tensor_8c.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a>(input-&gt;<a class="code hl_variable" href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">channels</a>, out_height, out_width);</div>
+<div class="line"><span class="lineno">    9</span> </div>
+<div class="line"><span class="lineno">   10</span>    <span class="keywordflow">if</span>(!output) {</div>
+<div class="line"><span class="lineno">   11</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   12</span>    }</div>
+<div class="line"><span class="lineno">   13</span> </div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordtype">int</span> input_channel_size  = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a> * input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>;</div>
+<div class="line"><span class="lineno">   15</span>    <span class="keywordtype">int</span> output_channel_size = out_height * out_width;</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c = 0; c &lt; input-&gt;<a class="code hl_variable" href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">channels</a>; c++) {</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>        <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* input_ptr  = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a>  + c * input_channel_size;</div>
+<div class="line"><span class="lineno">   20</span>        <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* output_ptr = output-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a> + c * output_channel_size;</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> h = 0; h &lt; out_height; h++) {</div>
+<div class="line"><span class="lineno">   23</span> </div>
+<div class="line"><span class="lineno">   24</span>            <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* row0 = input_ptr + (h * 2 + 0) * input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>;</div>
+<div class="line"><span class="lineno">   25</span>            <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* row1 = input_ptr + (h * 2 + 1) * input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>;</div>
+<div class="line"><span class="lineno">   26</span> </div>
+<div class="line"><span class="lineno">   27</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> w = 0; w &lt; out_width; w++) {</div>
+<div class="line"><span class="lineno">   28</span> </div>
+<div class="line"><span class="lineno">   29</span>                <span class="keywordtype">int</span> iw = w * 2;</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>                <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> v0 = row0[iw + 0];</div>
+<div class="line"><span class="lineno">   32</span>                <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> v1 = row0[iw + 1];</div>
+<div class="line"><span class="lineno">   33</span>                <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> v2 = row1[iw + 0];</div>
+<div class="line"><span class="lineno">   34</span>                <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> v3 = row1[iw + 1];</div>
+<div class="line"><span class="lineno">   35</span> </div>
+<div class="line"><span class="lineno">   36</span>                <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> max = v0;</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>                <span class="keywordflow">if</span>(v1 &gt; max) max = v1;</div>
+<div class="line"><span class="lineno">   39</span>                <span class="keywordflow">if</span>(v2 &gt; max) max = v2;</div>
+<div class="line"><span class="lineno">   40</span>                <span class="keywordflow">if</span>(v3 &gt; max) max = v3;</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>                output_ptr[h * out_width + w] = max;</div>
+<div class="line"><span class="lineno">   43</span>            }</div>
+<div class="line"><span class="lineno">   44</span>        }</div>
+<div class="line"><span class="lineno">   45</span>    }</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">return</span> output;</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+<div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a417a683a9ebc3cd10b6ece69c5532d53"><div class="ttname"><a href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">Tensor::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Altura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00045">tensor.h:45</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a487e00f72c168bd457c766bee6508bc5"><div class="ttname"><a href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">Tensor::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Anchura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00050">tensor.h:50</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a9d21e7a0caa74369b6999d6f365e3f7d"><div class="ttname"><a href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">Tensor::data</a></div><div class="ttdeci">type * data</div><div class="ttdoc">Puntero a los datos del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00060">tensor.h:60</a></div></div>
+<div class="ttc" id="astruct_tensor_html_ad514507b11bacd1d4b502207841b30b2"><div class="ttname"><a href="struct_tensor.html#ad514507b11bacd1d4b502207841b30b2">Tensor::channels</a></div><div class="ttdeci">int channels</div><div class="ttdoc">Número de canales del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00040">tensor.h:40</a></div></div>
+<div class="ttc" id="atensor_8c_html_a9f850f5edc3894ad727e86a33129e304"><div class="ttname"><a href="tensor_8c.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a></div><div class="ttdeci">Tensor * Tensor_Create(int c, int h, int w)</div><div class="ttdoc">Crea e inicializa un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00004">tensor.c:4</a></div></div>
+<div class="ttc" id="atensor_8h_html_a663d96b7a459537aa21a8aa6aa5b441f"><div class="ttname"><a href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a></div><div class="ttdeci">float type</div><div class="ttdoc">Tipo de dato utilizado por el tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00020">tensor.h:20</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li><li class="navelem"><a href="maxpool2d_8c.html">maxpool2d.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>

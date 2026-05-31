@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Referencia del archivo src/nn/convtranspose2d.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('convtranspose2d_8c.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo convtranspose2d.c</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="convtranspose2d_8h_source.html">nn\convtranspose2d.h</a>&quot;</code><br />
+</div>
+<p><a href="convtranspose2d_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a1c76fe32a3ecb14d67240979b7a6a36b" id="r_a1c76fe32a3ecb14d67240979b7a6a36b"><td class="memItemLeft"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a1c76fe32a3ecb14d67240979b7a6a36b">ConvTranspose2D_Create</a> (int in_channels, int out_channels)</td></tr>
+<tr class="memdesc:a1c76fe32a3ecb14d67240979b7a6a36b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea e inicializa una capa <a class="el" href="struct_conv_transpose2_d.html" title="Representa una capa de convolución transpuesta 2D.">ConvTranspose2D</a>.  <br /></td></tr>
+<tr class="memitem:a54069efd781809a0e70cf8f45e48045b" id="r_a54069efd781809a0e70cf8f45e48045b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a54069efd781809a0e70cf8f45e48045b">ConvTranspose2D_Destroy</a> (<a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *this)</td></tr>
+<tr class="memdesc:a54069efd781809a0e70cf8f45e48045b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria asociada a una capa <a class="el" href="struct_conv_transpose2_d.html" title="Representa una capa de convolución transpuesta 2D.">ConvTranspose2D</a>.  <br /></td></tr>
+<tr class="memitem:a4788275e104b078769f004fa8d724a0e" id="r_a4788275e104b078769f004fa8d724a0e"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a4788275e104b078769f004fa8d724a0e">ConvTranspose2D_Forward</a> (<a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *this, <a class="el" href="struct_tensor.html">Tensor</a> *input)</td></tr>
+<tr class="memdesc:a4788275e104b078769f004fa8d724a0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la propagación hacia adelante de la convolución transpuesta.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a1c76fe32a3ecb14d67240979b7a6a36b" name="a1c76fe32a3ecb14d67240979b7a6a36b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c76fe32a3ecb14d67240979b7a6a36b">&#9670;&#160;</a></span>ConvTranspose2D_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> * ConvTranspose2D_Create </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>in_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>out_channels</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea e inicializa una capa <a class="el" href="struct_conv_transpose2_d.html" title="Representa una capa de convolución transpuesta 2D.">ConvTranspose2D</a>. </p>
+<p>Reserva memoria para la estructura y sus parámetros internos.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_channels</td><td>Número de canales de entrada. </td></tr>
+    <tr><td class="paramname">out_channels</td><td>Número de canales de salida.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero a la estructura <a class="el" href="struct_conv_transpose2_d.html" title="Representa una capa de convolución transpuesta 2D.">ConvTranspose2D</a> creada. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error de memoria. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="convtranspose2d_8c_source.html#l00004">4</a> del archivo <a class="el" href="convtranspose2d_8c_source.html">convtranspose2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    4</span>                                                                           {</div>
+<div class="line"><span class="lineno">    5</span> </div>
+<div class="line"><span class="lineno">    6</span>    <a class="code hl_struct" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* <span class="keyword">this</span> = (<a class="code hl_struct" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>));</div>
+<div class="line"><span class="lineno">    7</span> </div>
+<div class="line"><span class="lineno">    8</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">    9</span> </div>
+<div class="line"><span class="lineno">   10</span>        <span class="keywordtype">int</span> weight_count =out_channels * in_channels * 2 * 2;</div>
+<div class="line"><span class="lineno">   11</span> </div>
+<div class="line"><span class="lineno">   12</span>        this-&gt;in_channels  = in_channels;</div>
+<div class="line"><span class="lineno">   13</span>        this-&gt;out_channels = out_channels;</div>
+<div class="line"><span class="lineno">   14</span> </div>
+<div class="line"><span class="lineno">   15</span>        this-&gt;weights = (<a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>) * weight_count);</div>
+<div class="line"><span class="lineno">   16</span> </div>
+<div class="line"><span class="lineno">   17</span>        this-&gt;bias =(<a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>) * out_channels);</div>
+<div class="line"><span class="lineno">   18</span> </div>
+<div class="line"><span class="lineno">   19</span>        <span class="keywordflow">if</span>(!this-&gt;weights || !this-&gt;bias) {</div>
+<div class="line"><span class="lineno">   20</span> </div>
+<div class="line"><span class="lineno">   21</span>            free(this-&gt;weights);</div>
+<div class="line"><span class="lineno">   22</span>            free(this-&gt;bias);</div>
+<div class="line"><span class="lineno">   23</span>            free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   24</span>            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>        }</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; weight_count; i++) {</div>
+<div class="line"><span class="lineno">   29</span>            this-&gt;weights[i] = 1.0f;</div>
+<div class="line"><span class="lineno">   30</span>        }</div>
+<div class="line"><span class="lineno">   31</span> </div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; out_channels; i++) {</div>
+<div class="line"><span class="lineno">   33</span>            this-&gt;bias[i] = 0.0f;</div>
+<div class="line"><span class="lineno">   34</span>        }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>    <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   38</span>}</div>
+<div class="ttc" id="astruct_conv_transpose2_d_html"><div class="ttname"><a href="struct_conv_transpose2_d.html">ConvTranspose2D</a></div><div class="ttdoc">Representa una capa de convolución transpuesta 2D.</div><div class="ttdef"><b>Definition</b> <a href="convtranspose2d_8h_source.html#l00024">convtranspose2d.h:25</a></div></div>
+<div class="ttc" id="atensor_8h_html_a663d96b7a459537aa21a8aa6aa5b441f"><div class="ttname"><a href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a></div><div class="ttdeci">float type</div><div class="ttdoc">Tipo de dato utilizado por el tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00020">tensor.h:20</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a54069efd781809a0e70cf8f45e48045b" name="a54069efd781809a0e70cf8f45e48045b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54069efd781809a0e70cf8f45e48045b">&#9670;&#160;</a></span>ConvTranspose2D_Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConvTranspose2D_Destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera la memoria asociada a una capa <a class="el" href="struct_conv_transpose2_d.html" title="Representa una capa de convolución transpuesta 2D.">ConvTranspose2D</a>. </p>
+<p>También libera los pesos y sesgos almacenados.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero a la capa <a class="el" href="struct_conv_transpose2_d.html" title="Representa una capa de convolución transpuesta 2D.">ConvTranspose2D</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="convtranspose2d_8c_source.html#l00041">41</a> del archivo <a class="el" href="convtranspose2d_8c_source.html">convtranspose2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   41</span>                                                    {</div>
+<div class="line"><span class="lineno">   42</span> </div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   44</span> </div>
+<div class="line"><span class="lineno">   45</span>        free(this-&gt;weights);</div>
+<div class="line"><span class="lineno">   46</span>        free(this-&gt;bias);</div>
+<div class="line"><span class="lineno">   47</span> </div>
+<div class="line"><span class="lineno">   48</span>        free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   49</span>    }</div>
+<div class="line"><span class="lineno">   50</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4788275e104b078769f004fa8d724a0e" name="a4788275e104b078769f004fa8d724a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4788275e104b078769f004fa8d724a0e">&#9670;&#160;</a></span>ConvTranspose2D_Forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * ConvTranspose2D_Forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta la propagación hacia adelante de la convolución transpuesta. </p>
+<p>Aplica una operación de upsampling mediante convolución transpuesta sobre el tensor de entrada.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero a la capa <a class="el" href="struct_conv_transpose2_d.html" title="Representa una capa de convolución transpuesta 2D.">ConvTranspose2D</a>. </td></tr>
+    <tr><td class="paramname">input</td><td><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de entrada.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de salida generado por la convolución transpuesta. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error durante la operación. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="convtranspose2d_8c_source.html#l00052">52</a> del archivo <a class="el" href="convtranspose2d_8c_source.html">convtranspose2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   52</span>                                                                      {</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordtype">int</span> out_height = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a> * 2;</div>
+<div class="line"><span class="lineno">   55</span>    <span class="keywordtype">int</span> out_width  = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>  * 2;</div>
+<div class="line"><span class="lineno">   56</span> </div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* output =</div>
+<div class="line"><span class="lineno">   58</span>        <a class="code hl_function" href="tensor_8c.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a>(this-&gt;out_channels,out_height,out_width);</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <span class="keywordflow">if</span>(!output) {</div>
+<div class="line"><span class="lineno">   61</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   62</span>    }</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <span class="keywordtype">int</span> input_channel_size  = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a> * input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>;</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordtype">int</span> output_channel_size = out_height * out_width;</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> oc = 0; oc &lt; this-&gt;out_channels; oc++) {</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>        <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* output_ptr =output-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a> + oc * output_channel_size;</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; output_channel_size; i++) {</div>
+<div class="line"><span class="lineno">   72</span>            output_ptr[i] = this-&gt;bias[oc];</div>
+<div class="line"><span class="lineno">   73</span>        }</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ic = 0; ic &lt; this-&gt;in_channels; ic++) {</div>
+<div class="line"><span class="lineno">   76</span> </div>
+<div class="line"><span class="lineno">   77</span>            <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* input_ptr = input-&gt;<a class="code hl_variable" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">data</a> + ic * input_channel_size;</div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a>* weight_ptr = this-&gt;weights + (ic * this-&gt;out_channels + oc) * 4;</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ih = 0; ih &lt; input-&gt;<a class="code hl_variable" href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">height</a>; ih++) {</div>
+<div class="line"><span class="lineno">   81</span>                </div>
+<div class="line"><span class="lineno">   82</span>                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> iw = 0; iw &lt; input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a>; iw++) {</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>                    <a class="code hl_typedef" href="tensor_8h.html#a663d96b7a459537aa21a8aa6aa5b441f">type</a> value = input_ptr[ih * input-&gt;<a class="code hl_variable" href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">width</a> + iw];</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>                    <span class="keywordtype">int</span> oh = ih * 2;</div>
+<div class="line"><span class="lineno">   87</span>                    <span class="keywordtype">int</span> ow = iw * 2;</div>
+<div class="line"><span class="lineno">   88</span> </div>
+<div class="line"><span class="lineno">   89</span>                    output_ptr[(oh + 0) * out_width + (ow + 0)] += value * weight_ptr[0];</div>
+<div class="line"><span class="lineno">   90</span>                    output_ptr[(oh + 0) * out_width + (ow + 1)] += value * weight_ptr[1];</div>
+<div class="line"><span class="lineno">   91</span>                    output_ptr[(oh + 1) * out_width + (ow + 0)] += value * weight_ptr[2];</div>
+<div class="line"><span class="lineno">   92</span>                    output_ptr[(oh + 1) * out_width + (ow + 1)] += value * weight_ptr[3];</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>                }</div>
+<div class="line"><span class="lineno">   95</span>            }</div>
+<div class="line"><span class="lineno">   96</span>        }</div>
+<div class="line"><span class="lineno">   97</span>    }</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    <span class="keywordflow">return</span> output;</div>
+<div class="line"><span class="lineno">  100</span>}</div>
+<div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a417a683a9ebc3cd10b6ece69c5532d53"><div class="ttname"><a href="struct_tensor.html#a417a683a9ebc3cd10b6ece69c5532d53">Tensor::height</a></div><div class="ttdeci">int height</div><div class="ttdoc">Altura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00045">tensor.h:45</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a487e00f72c168bd457c766bee6508bc5"><div class="ttname"><a href="struct_tensor.html#a487e00f72c168bd457c766bee6508bc5">Tensor::width</a></div><div class="ttdeci">int width</div><div class="ttdoc">Anchura del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00050">tensor.h:50</a></div></div>
+<div class="ttc" id="astruct_tensor_html_a9d21e7a0caa74369b6999d6f365e3f7d"><div class="ttname"><a href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">Tensor::data</a></div><div class="ttdeci">type * data</div><div class="ttdoc">Puntero a los datos del tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00060">tensor.h:60</a></div></div>
+<div class="ttc" id="atensor_8c_html_a9f850f5edc3894ad727e86a33129e304"><div class="ttname"><a href="tensor_8c.html#a9f850f5edc3894ad727e86a33129e304">Tensor_Create</a></div><div class="ttdeci">Tensor * Tensor_Create(int c, int h, int w)</div><div class="ttdoc">Crea e inicializa un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00004">tensor.c:4</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_8ddd85c06ebeec0a6efc6a7da38f01d9.html">nn</a></li><li class="navelem"><a href="convtranspose2d_8c.html">convtranspose2d.c</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
