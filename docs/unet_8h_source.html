@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Archivo de código fuente inc/nn/unet.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('unet_8h_source.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">unet.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="unet_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifndef UNET_H</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define UNET_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="doubleconv2d_8h.html">doubleconv2d.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="maxpool2d_8h.html">maxpool2d.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="convtranspose2d_8h.html">convtranspose2d.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="conv2d_8h.html">conv2d.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="struct_u_net.html">   28</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="struct_u_net.html#a5cbc068ec7b42470688faa1f0bc1be6c">   33</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a5cbc068ec7b42470688faa1f0bc1be6c">enc1</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_u_net.html#ac6d09abf1612566fe70bb4de414d834a">   38</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#ac6d09abf1612566fe70bb4de414d834a">enc2</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="struct_u_net.html#a8c1a0e359b9eba9502f8044f04211044">   43</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a8c1a0e359b9eba9502f8044f04211044">enc3</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="struct_u_net.html#a48f282e302775d7d831e2eb7b8ca8268">   48</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a48f282e302775d7d831e2eb7b8ca8268">enc4</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="struct_u_net.html#ad9413e42515fec958adda1cad3a7643a">   53</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#ad9413e42515fec958adda1cad3a7643a">bottleneck</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_u_net.html#aa69ac58e843826a9b85a665f1b44a988">   58</a></span>    <a class="code hl_struct" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* <a class="code hl_variable" href="struct_u_net.html#aa69ac58e843826a9b85a665f1b44a988">upconv4</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="struct_u_net.html#a5bfbd941fa5963b8ec73eacf9f30d02f">   63</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a5bfbd941fa5963b8ec73eacf9f30d02f">dec4</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_u_net.html#afe1dae4813f84c19a4dc8c7105ceb7d3">   68</a></span>    <a class="code hl_struct" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* <a class="code hl_variable" href="struct_u_net.html#afe1dae4813f84c19a4dc8c7105ceb7d3">upconv3</a>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_u_net.html#a11fe505a23229640ad2b731b8f650499">   73</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a11fe505a23229640ad2b731b8f650499">dec3</a>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="struct_u_net.html#a9dcad1923392669cf3550737f78c3fd3">   78</a></span>    <a class="code hl_struct" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* <a class="code hl_variable" href="struct_u_net.html#a9dcad1923392669cf3550737f78c3fd3">upconv2</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="struct_u_net.html#a2071ef5610ffe686fd15ca954e12d081">   83</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a2071ef5610ffe686fd15ca954e12d081">dec2</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="struct_u_net.html#a068dd5719513761eb87f6804fa1f8bca">   88</a></span>    <a class="code hl_struct" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* <a class="code hl_variable" href="struct_u_net.html#a068dd5719513761eb87f6804fa1f8bca">upconv1</a>;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="struct_u_net.html#a3745c783e8cbed8c42746cdb2078f498">   93</a></span>    <a class="code hl_struct" href="struct_double_conv2_d.html">DoubleConv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a3745c783e8cbed8c42746cdb2078f498">dec1</a>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="struct_u_net.html#a6be060a293021ebe328d015f3b8223be">   98</a></span>    <a class="code hl_struct" href="struct_conv2_d.html">Conv2D</a>* <a class="code hl_variable" href="struct_u_net.html#a6be060a293021ebe328d015f3b8223be">out_conv</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>} <a class="code hl_struct" href="struct_u_net.html">UNet</a>;</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><a class="code hl_struct" href="struct_u_net.html">UNet</a>* <a class="code hl_function" href="unet_8h.html#a0e6775880808000375361abcc2feacbc">UNet_Create</a>(<span class="keywordtype">int</span> in_channels, <span class="keywordtype">int</span> out_channels);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> <a class="code hl_function" href="unet_8h.html#ae4c1237677972be9d97c194f8504604b">UNet_Destroy</a>(<a class="code hl_struct" href="struct_u_net.html">UNet</a>* <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><a class="code hl_struct" href="struct_tensor.html">Tensor</a>* <a class="code hl_function" href="unet_8h.html#ae5bb82add86bf7720ab54a6b6bfc9838">UNet_Forward</a>(<a class="code hl_struct" href="struct_u_net.html">UNet</a>* <span class="keyword">this</span>, <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* input);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aconv2d_8h_html"><div class="ttname"><a href="conv2d_8h.html">conv2d.h</a></div><div class="ttdoc">Definición de la capa de convolución 2D.</div></div>
+<div class="ttc" id="aconvtranspose2d_8h_html"><div class="ttname"><a href="convtranspose2d_8h.html">convtranspose2d.h</a></div><div class="ttdoc">Definición de la capa de convolución transpuesta 2D.</div></div>
+<div class="ttc" id="adoubleconv2d_8h_html"><div class="ttname"><a href="doubleconv2d_8h.html">doubleconv2d.h</a></div><div class="ttdoc">Definición del bloque Double Convolution 2D.</div></div>
+<div class="ttc" id="amaxpool2d_8h_html"><div class="ttname"><a href="maxpool2d_8h.html">maxpool2d.h</a></div><div class="ttdoc">Implementación de la operación Max Pooling 2D.</div></div>
+<div class="ttc" id="astruct_conv2_d_html"><div class="ttname"><a href="struct_conv2_d.html">Conv2D</a></div><div class="ttdoc">Representa una capa de convolución 2D.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8h_source.html#l00022">conv2d.h:23</a></div></div>
+<div class="ttc" id="astruct_conv_transpose2_d_html"><div class="ttname"><a href="struct_conv_transpose2_d.html">ConvTranspose2D</a></div><div class="ttdoc">Representa una capa de convolución transpuesta 2D.</div><div class="ttdef"><b>Definition</b> <a href="convtranspose2d_8h_source.html#l00024">convtranspose2d.h:25</a></div></div>
+<div class="ttc" id="astruct_double_conv2_d_html"><div class="ttname"><a href="struct_double_conv2_d.html">DoubleConv2D</a></div><div class="ttdoc">Representa un bloque de doble convolución.</div><div class="ttdef"><b>Definition</b> <a href="doubleconv2d_8h_source.html#l00028">doubleconv2d.h:29</a></div></div>
+<div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
+<div class="ttc" id="astruct_u_net_html"><div class="ttname"><a href="struct_u_net.html">UNet</a></div><div class="ttdoc">Implementación de una red U-Net.</div><div class="ttdef"><b>Definition</b> <a href="#l00028">unet.h:29</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a068dd5719513761eb87f6804fa1f8bca"><div class="ttname"><a href="struct_u_net.html#a068dd5719513761eb87f6804fa1f8bca">UNet::upconv1</a></div><div class="ttdeci">ConvTranspose2D * upconv1</div><div class="ttdoc">Convolución transpuesta del nivel 1.</div><div class="ttdef"><b>Definition</b> <a href="#l00088">unet.h:88</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a11fe505a23229640ad2b731b8f650499"><div class="ttname"><a href="struct_u_net.html#a11fe505a23229640ad2b731b8f650499">UNet::dec3</a></div><div class="ttdeci">DoubleConv2D * dec3</div><div class="ttdoc">Bloque decodificador del nivel 3.</div><div class="ttdef"><b>Definition</b> <a href="#l00073">unet.h:73</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a2071ef5610ffe686fd15ca954e12d081"><div class="ttname"><a href="struct_u_net.html#a2071ef5610ffe686fd15ca954e12d081">UNet::dec2</a></div><div class="ttdeci">DoubleConv2D * dec2</div><div class="ttdoc">Bloque decodificador del nivel 2.</div><div class="ttdef"><b>Definition</b> <a href="#l00083">unet.h:83</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a3745c783e8cbed8c42746cdb2078f498"><div class="ttname"><a href="struct_u_net.html#a3745c783e8cbed8c42746cdb2078f498">UNet::dec1</a></div><div class="ttdeci">DoubleConv2D * dec1</div><div class="ttdoc">Bloque decodificador del nivel 1.</div><div class="ttdef"><b>Definition</b> <a href="#l00093">unet.h:93</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a48f282e302775d7d831e2eb7b8ca8268"><div class="ttname"><a href="struct_u_net.html#a48f282e302775d7d831e2eb7b8ca8268">UNet::enc4</a></div><div class="ttdeci">DoubleConv2D * enc4</div><div class="ttdoc">Cuarto bloque del encoder.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">unet.h:48</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a5bfbd941fa5963b8ec73eacf9f30d02f"><div class="ttname"><a href="struct_u_net.html#a5bfbd941fa5963b8ec73eacf9f30d02f">UNet::dec4</a></div><div class="ttdeci">DoubleConv2D * dec4</div><div class="ttdoc">Bloque decodificador del nivel 4.</div><div class="ttdef"><b>Definition</b> <a href="#l00063">unet.h:63</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a5cbc068ec7b42470688faa1f0bc1be6c"><div class="ttname"><a href="struct_u_net.html#a5cbc068ec7b42470688faa1f0bc1be6c">UNet::enc1</a></div><div class="ttdeci">DoubleConv2D * enc1</div><div class="ttdoc">Primer bloque del encoder.</div><div class="ttdef"><b>Definition</b> <a href="#l00033">unet.h:33</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a6be060a293021ebe328d015f3b8223be"><div class="ttname"><a href="struct_u_net.html#a6be060a293021ebe328d015f3b8223be">UNet::out_conv</a></div><div class="ttdeci">Conv2D * out_conv</div><div class="ttdoc">Capa convolucional de salida.</div><div class="ttdef"><b>Definition</b> <a href="#l00098">unet.h:98</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a8c1a0e359b9eba9502f8044f04211044"><div class="ttname"><a href="struct_u_net.html#a8c1a0e359b9eba9502f8044f04211044">UNet::enc3</a></div><div class="ttdeci">DoubleConv2D * enc3</div><div class="ttdoc">Tercer bloque del encoder.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">unet.h:43</a></div></div>
+<div class="ttc" id="astruct_u_net_html_a9dcad1923392669cf3550737f78c3fd3"><div class="ttname"><a href="struct_u_net.html#a9dcad1923392669cf3550737f78c3fd3">UNet::upconv2</a></div><div class="ttdeci">ConvTranspose2D * upconv2</div><div class="ttdoc">Convolución transpuesta del nivel 2.</div><div class="ttdef"><b>Definition</b> <a href="#l00078">unet.h:78</a></div></div>
+<div class="ttc" id="astruct_u_net_html_aa69ac58e843826a9b85a665f1b44a988"><div class="ttname"><a href="struct_u_net.html#aa69ac58e843826a9b85a665f1b44a988">UNet::upconv4</a></div><div class="ttdeci">ConvTranspose2D * upconv4</div><div class="ttdoc">Convolución transpuesta del nivel 4.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">unet.h:58</a></div></div>
+<div class="ttc" id="astruct_u_net_html_ac6d09abf1612566fe70bb4de414d834a"><div class="ttname"><a href="struct_u_net.html#ac6d09abf1612566fe70bb4de414d834a">UNet::enc2</a></div><div class="ttdeci">DoubleConv2D * enc2</div><div class="ttdoc">Segundo bloque del encoder.</div><div class="ttdef"><b>Definition</b> <a href="#l00038">unet.h:38</a></div></div>
+<div class="ttc" id="astruct_u_net_html_ad9413e42515fec958adda1cad3a7643a"><div class="ttname"><a href="struct_u_net.html#ad9413e42515fec958adda1cad3a7643a">UNet::bottleneck</a></div><div class="ttdeci">DoubleConv2D * bottleneck</div><div class="ttdoc">Bloque central de la red.</div><div class="ttdef"><b>Definition</b> <a href="#l00053">unet.h:53</a></div></div>
+<div class="ttc" id="astruct_u_net_html_afe1dae4813f84c19a4dc8c7105ceb7d3"><div class="ttname"><a href="struct_u_net.html#afe1dae4813f84c19a4dc8c7105ceb7d3">UNet::upconv3</a></div><div class="ttdeci">ConvTranspose2D * upconv3</div><div class="ttdoc">Convolución transpuesta del nivel 3.</div><div class="ttdef"><b>Definition</b> <a href="#l00068">unet.h:68</a></div></div>
+<div class="ttc" id="aunet_8h_html_a0e6775880808000375361abcc2feacbc"><div class="ttname"><a href="unet_8h.html#a0e6775880808000375361abcc2feacbc">UNet_Create</a></div><div class="ttdeci">UNet * UNet_Create(int in_channels, int out_channels)</div><div class="ttdoc">Crea e inicializa una red U-Net.</div><div class="ttdef"><b>Definition</b> <a href="unet_8c_source.html#l00003">unet.c:3</a></div></div>
+<div class="ttc" id="aunet_8h_html_ae4c1237677972be9d97c194f8504604b"><div class="ttname"><a href="unet_8h.html#ae4c1237677972be9d97c194f8504604b">UNet_Destroy</a></div><div class="ttdeci">void UNet_Destroy(UNet *this)</div><div class="ttdoc">Libera la memoria asociada a una red U-Net.</div><div class="ttdef"><b>Definition</b> <a href="unet_8c_source.html#l00055">unet.c:55</a></div></div>
+<div class="ttc" id="aunet_8h_html_ae5bb82add86bf7720ab54a6b6bfc9838"><div class="ttname"><a href="unet_8h.html#ae5bb82add86bf7720ab54a6b6bfc9838">UNet_Forward</a></div><div class="ttdeci">Tensor * UNet_Forward(UNet *this, Tensor *input)</div><div class="ttdoc">Ejecuta la propagación hacia adelante de la red U-Net.</div><div class="ttdef"><b>Definition</b> <a href="unet_8c_source.html#l00085">unet.c:85</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a href="dir_39ad8ae55e5e6bb8e5a72d2b575ac278.html">nn</a></li><li class="navelem"><a href="unet_8h.html">unet.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
