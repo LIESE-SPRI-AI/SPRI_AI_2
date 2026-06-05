@@ -1,7 +1,7 @@
 /**
  * @file doubleconv2d.h
  * @brief Definición del bloque Double Convolution 2D.
- *
+ * @author Guillermo Ocaña
  * Este archivo contiene la estructura y funciones necesarias
  * para implementar un bloque compuesto por dos convoluciones
  * consecutivas con Batch Normalization y activación ReLU.

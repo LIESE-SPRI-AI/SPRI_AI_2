@@ -1,7 +1,7 @@
 /**
  * @file conv2d.h
  * @brief Definición de la capa de convolución 2D.
- *
+ * @author Guillermo Ocaña
  * Este archivo contiene la estructura y las funciones necesarias
  * para crear, utilizar y destruir una capa convolucional 2D
  * utilizada en redes neuronales.

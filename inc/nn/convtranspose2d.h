@@ -1,7 +1,7 @@
 /**
  * @file convtranspose2d.h
  * @brief Definición de la capa de convolución transpuesta 2D.
- *
+ * @author Guillermo Ocaña
  * Este archivo contiene la estructura y funciones necesarias
  * para realizar operaciones de upsampling mediante convolución
  * transpuesta, comúnmente utilizadas en arquitecturas tipo U-Net.

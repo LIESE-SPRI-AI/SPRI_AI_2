@@ -2,7 +2,7 @@
  * @file maxpool2d.h
  * @brief Implementación de la operación Max Pooling 2D.
  * @author Guillermo Ocaña
- *
+ * 
  * Este archivo contiene la declaración de la operación
  * Max Pooling utilizada para reducir la resolución espacial
  * de mapas de características en redes neuronales convolucionales.

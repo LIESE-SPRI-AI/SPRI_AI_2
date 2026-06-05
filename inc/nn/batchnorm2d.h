@@ -1,7 +1,7 @@
 /**
  * @file batchnorm2d.h
  * @brief Definición de la capa Batch Normalization 2D.
- *
+ * @author Guillermo Ocaña
  * Este archivo contiene la estructura y funciones necesarias
  * para aplicar normalización por lotes sobre tensores 2D
  * utilizados en redes neuronales convolucionales.

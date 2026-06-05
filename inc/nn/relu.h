@@ -1,7 +1,7 @@
 /**
  * @file relu.h
  * @brief Implementación de la función de activación ReLU.
- *
+ * @author Guillermo Ocaña
  * Este archivo contiene la declaración de la operación
  * Rectified Linear Unit (ReLU) aplicada sobre tensores.
  */
