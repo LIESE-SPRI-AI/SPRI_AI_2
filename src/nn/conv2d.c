@@ -117,6 +117,90 @@ Tensor* Conv2D_Forward(Conv2D* this, Tensor* input)
 }
 
 
+Tensor * Conv2D_DepthwiseForward(Conv2D *this, Tensor *input)
+{
+    int out_height = input->height;
+    int out_width = input->width;
+
+    Tensor *output = Tensor_Create(input->channels, out_height, out_width);
+
+    if (!output)
+    {
+        return NULL;
+    }
+
+    int channel_size = input->height * input->width;
+
+#pragma omp parallel for
+    for (int c = 0; c < input->channels; c++)
+    {
+        type *input_ptr = input->data + c * channel_size;
+        type *output_ptr = output->data + c * channel_size;
+        type *weight_ptr = this->weights + c * 9;
+
+        for (int oh = 0; oh < out_height; oh++)
+        {
+            for (int ow = 0; ow < out_width; ow++)
+            {
+                type sum = this->bias[c];
+
+                int ih0 = oh - 1;
+                int ih1 = oh;
+                int ih2 = oh + 1;
+
+                int iw0 = ow - 1;
+                int iw1 = ow;
+                int iw2 = ow + 1;
+
+                if (ih0 >= 0)
+                {
+                    int row = ih0 * input->width;
+
+                    if (iw0 >= 0)
+                        sum += input_ptr[row + iw0] * weight_ptr[0];
+
+                    sum += input_ptr[row + iw1] * weight_ptr[1];
+
+                    if (iw2 < input->width)
+                        sum += input_ptr[row + iw2] * weight_ptr[2];
+                }
+
+                {
+                    int row = ih1 * input->width;
+
+                    if (iw0 >= 0)
+                        sum += input_ptr[row + iw0] * weight_ptr[3];
+
+                    sum += input_ptr[row + iw1] * weight_ptr[4];
+
+                    if (iw2 < input->width)
+                        sum += input_ptr[row + iw2] * weight_ptr[5];
+                }
+
+                if (ih2 < input->height)
+                {
+                    int row = ih2 * input->width;
+
+                    if (iw0 >= 0)
+                        sum += input_ptr[row + iw0] * weight_ptr[6];
+
+                    sum += input_ptr[row + iw1] * weight_ptr[7];
+
+                    if (iw2 < input->width)
+                        sum += input_ptr[row + iw2] * weight_ptr[8];
+                }
+
+                output_ptr[oh * out_width + ow] = sum;
+            }
+        }
+    }
+
+    return output;
+}
+
+
+
+
 // Tensor* Conv2D_Forward(Conv2D* this, Tensor* input)
 // {
 //     int out_height = input->height;

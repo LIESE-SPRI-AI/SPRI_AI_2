@@ -136,4 +136,132 @@ void UNet_Destroy(UNet* this);
  */
 Tensor* UNet_Forward(UNet* this, Tensor* input);
 
+
+/**
+ * @struct MobileUNet
+ * @brief Implementación de una U-Net basada en convoluciones separables.
+ *
+ * Esta arquitectura reemplaza los bloques DoubleConv2D
+ * convencionales por bloques MobileDoubleConv2D, reduciendo
+ * significativamente el número de parámetros y operaciones
+ * requeridas durante la inferencia.
+ *
+ * La red está compuesta por una ruta de codificación
+ * (encoder), un cuello de botella (bottleneck) y una ruta
+ * de decodificación (decoder) con conexiones de salto
+ * (skip connections).
+ */
+typedef struct
+{
+    /**
+     * @brief Primer bloque del encoder.
+     */
+    MobileDoubleConv2D* enc1;
+
+    /**
+     * @brief Segundo bloque del encoder.
+     */
+    MobileDoubleConv2D* enc2;
+
+    /**
+     * @brief Tercer bloque del encoder.
+     */
+    MobileDoubleConv2D* enc3;
+
+    /**
+     * @brief Cuarto bloque del encoder.
+     */
+    MobileDoubleConv2D* enc4;
+
+    /**
+     * @brief Bloque central de la red.
+     */
+    MobileDoubleConv2D* bottleneck;
+
+    /**
+     * @brief Convolución transpuesta del nivel 4.
+     */
+    ConvTranspose2D* upconv4;
+
+    /**
+     * @brief Bloque decodificador del nivel 4.
+     */
+    MobileDoubleConv2D* dec4;
+
+    /**
+     * @brief Convolución transpuesta del nivel 3.
+     */
+    ConvTranspose2D* upconv3;
+
+    /**
+     * @brief Bloque decodificador del nivel 3.
+     */
+    MobileDoubleConv2D* dec3;
+
+    /**
+     * @brief Convolución transpuesta del nivel 2.
+     */
+    ConvTranspose2D* upconv2;
+
+    /**
+     * @brief Bloque decodificador del nivel 2.
+     */
+    MobileDoubleConv2D* dec2;
+
+    /**
+     * @brief Convolución transpuesta del nivel 1.
+     */
+    ConvTranspose2D* upconv1;
+
+    /**
+     * @brief Bloque decodificador del nivel 1.
+     */
+    MobileDoubleConv2D* dec1;
+
+    /**
+     * @brief Capa convolucional de salida.
+     */
+    Conv2D* out_conv;
+
+} MobileUNet;
+
+/**
+ * @brief Crea e inicializa una red MobileUNet.
+ *
+ * Construye todos los bloques del encoder, bottleneck,
+ * decoder y la capa de salida utilizando convoluciones
+ * depthwise separables.
+ *
+ * @param in_channels Número de canales de entrada.
+ * @param out_channels Número de canales de salida.
+ *
+ * @return Puntero a la estructura MobileUNet creada.
+ * @retval NULL Si ocurre un error de memoria.
+ */
+MobileUNet* MobileUNet_Create(int in_channels, int out_channels);
+
+/**
+ * @brief Libera la memoria asociada a una red MobileUNet.
+ *
+ * Libera todos los bloques internos y parámetros de la red.
+ *
+ * @param this Puntero a la estructura MobileUNet.
+ */
+void MobileUNet_Destroy(MobileUNet* this);
+
+/**
+ * @brief Ejecuta la propagación hacia adelante de la red MobileUNet.
+ *
+ * Procesa el tensor de entrada a través del encoder,
+ * bottleneck y decoder utilizando bloques de convolución
+ * separable en profundidad.
+ *
+ * @param this Puntero a la estructura MobileUNet.
+ * @param input Tensor de entrada.
+ *
+ * @return Tensor de salida generado por la red.
+ * @retval NULL Si ocurre un error durante la operación.
+ */
+Tensor* MobileUNet_Forward(MobileUNet* this, Tensor* input);
+
 #endif

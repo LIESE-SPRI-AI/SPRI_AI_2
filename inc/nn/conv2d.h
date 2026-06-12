@@ -100,6 +100,28 @@ void Conv2D_Destroy(Conv2D* this);
  */
 Tensor* Conv2D_Forward( Conv2D* this, Tensor* input);
 
+
+/**
+ * @brief Ejecuta una convolución depthwise sobre un tensor.
+ *
+ * Aplica una convolución independiente sobre cada canal
+ * de entrada utilizando un kernel específico para dicho canal.
+ * No existe mezcla de información entre canales durante
+ * esta operación.
+ *
+ * @param this Puntero a la capa Conv2D configurada para
+ *             operación depthwise.
+ * @param input Tensor de entrada.
+ *
+ * @return Tensor resultante de la convolución depthwise.
+ * @retval NULL Si ocurre un error durante la operación.
+ * 
+ * @note Esta función asume que el número de canales de salida
+ *       coincide con el número de canales de entrada.
+ */
+Tensor *Conv2D_DepthwiseForward(Conv2D *this, Tensor *input);
+
+
 #endif
 
 

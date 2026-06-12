@@ -84,4 +84,87 @@ void DoubleConv2D_Destroy(DoubleConv2D* this);
  */
 Tensor* DoubleConv2D_Forward(DoubleConv2D* this, Tensor* input);
 
+
+typedef struct
+{
+    /**
+     * @brief Primera convolución depthwise.
+     */
+    Conv2D* depthwise1;
+
+    /**
+     * @brief Primera capa Batch Normalization.
+     */
+    BatchNorm2D* bn1;
+
+    /**
+     * @brief Primera convolución pointwise.
+     */
+    Conv2D* pointwise1;
+
+    /**
+     * @brief Segunda capa Batch Normalization.
+     */
+    BatchNorm2D* bn2;
+
+    /**
+     * @brief Segunda convolución depthwise.
+     */
+    Conv2D* depthwise2;
+
+    /**
+     * @brief Tercera capa Batch Normalization.
+     */
+    BatchNorm2D* bn3;
+
+    /**
+     * @brief Segunda convolución pointwise.
+     */
+    Conv2D* pointwise2;
+
+    /**
+     * @brief Cuarta capa Batch Normalization.
+     */
+    BatchNorm2D* bn4;
+
+} MobileDoubleConv2D;
+
+/**
+ * @brief Crea e inicializa un bloque MobileDoubleConv2D.
+ *
+ * Inicializa dos bloques de convolución depthwise separable
+ * compuestos por convoluciones depthwise, pointwise y capas
+ * Batch Normalization.
+ *
+ * @param in_channels Número de canales de entrada.
+ * @param out_channels Número de canales de salida.
+ *
+ * @return Puntero al bloque MobileDoubleConv2D creado.
+ * @retval NULL Si ocurre un error de memoria.
+ */
+MobileDoubleConv2D* MobileDoubleConv2D_Create(int in_channels, int out_channels);
+
+/**
+ * @brief Libera la memoria asociada a un bloque MobileDoubleConv2D.
+ *
+ * @param this Puntero al bloque MobileDoubleConv2D.
+ */
+void MobileDoubleConv2D_Destroy(MobileDoubleConv2D* this);
+
+/**
+ * @brief Ejecuta la propagación hacia adelante del bloque.
+ *
+ * Aplica dos convoluciones depthwise separables consecutivas
+ * sobre el tensor de entrada.
+ *
+ * @param this Puntero al bloque MobileDoubleConv2D.
+ * @param input Tensor de entrada.
+ *
+ * @return Tensor de salida procesado.
+ * @retval NULL Si ocurre un error durante la operación.
+ */
+Tensor* MobileDoubleConv2D_Forward(MobileDoubleConv2D* this, Tensor* input);
+
+
+
 #endif

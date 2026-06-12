@@ -119,9 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <h3 class="doxsection"><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>bias&#160;:&#160;<a class="el" href="struct_batch_norm2_d.html#a4735dc05023b8f95e3ded584ea4844ff">BatchNorm2D</a>, <a class="el" href="struct_conv2_d.html#a6261067716e99e521c461fcd9c977135">Conv2D</a>, <a class="el" href="struct_conv_transpose2_d.html#aae8cbf7d81ce0f4463618aefd07943e0">ConvTranspose2D</a></li>
-<li>bn1&#160;:&#160;<a class="el" href="struct_double_conv2_d.html#a8d7c3bcbf6c6cb447a1b3d6b0acc7509">DoubleConv2D</a></li>
-<li>bn2&#160;:&#160;<a class="el" href="struct_double_conv2_d.html#a6d078b67c473ccd7c79ec4b060de1e88">DoubleConv2D</a></li>
-<li>bottleneck&#160;:&#160;<a class="el" href="struct_u_net.html#ad9413e42515fec958adda1cad3a7643a">UNet</a></li>
+<li>bn1&#160;:&#160;<a class="el" href="struct_double_conv2_d.html#a8d7c3bcbf6c6cb447a1b3d6b0acc7509">DoubleConv2D</a>, <a class="el" href="struct_mobile_double_conv2_d.html#a65fd75490e51db7043c2efb7871b982f">MobileDoubleConv2D</a></li>
+<li>bn2&#160;:&#160;<a class="el" href="struct_double_conv2_d.html#a6d078b67c473ccd7c79ec4b060de1e88">DoubleConv2D</a>, <a class="el" href="struct_mobile_double_conv2_d.html#a6acca454d3195a0965af130ac812e7f5">MobileDoubleConv2D</a></li>
+<li>bn3&#160;:&#160;<a class="el" href="struct_mobile_double_conv2_d.html#a73c4a6bc987ad41d974ba89bfaec4f15">MobileDoubleConv2D</a></li>
+<li>bn4&#160;:&#160;<a class="el" href="struct_mobile_double_conv2_d.html#ab93c341defeb70ce6ab823a579e5d25f">MobileDoubleConv2D</a></li>
+<li>bottleneck&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a388ae22ba08511ab7da629a25c17c04b">MobileUNet</a>, <a class="el" href="struct_u_net.html#ad9413e42515fec958adda1cad3a7643a">UNet</a></li>
 </ul>
 
 
@@ -134,18 +136,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <h3 class="doxsection"><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>data&#160;:&#160;<a class="el" href="struct_tensor.html#a9d21e7a0caa74369b6999d6f365e3f7d">Tensor</a></li>
-<li>dec1&#160;:&#160;<a class="el" href="struct_u_net.html#a3745c783e8cbed8c42746cdb2078f498">UNet</a></li>
-<li>dec2&#160;:&#160;<a class="el" href="struct_u_net.html#a2071ef5610ffe686fd15ca954e12d081">UNet</a></li>
-<li>dec3&#160;:&#160;<a class="el" href="struct_u_net.html#a11fe505a23229640ad2b731b8f650499">UNet</a></li>
-<li>dec4&#160;:&#160;<a class="el" href="struct_u_net.html#a5bfbd941fa5963b8ec73eacf9f30d02f">UNet</a></li>
+<li>dec1&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#aa656394841d2882454e863ea1abdabe2">MobileUNet</a>, <a class="el" href="struct_u_net.html#a3745c783e8cbed8c42746cdb2078f498">UNet</a></li>
+<li>dec2&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a0d17d4c7be2a5b11d4a5d000e143410d">MobileUNet</a>, <a class="el" href="struct_u_net.html#a2071ef5610ffe686fd15ca954e12d081">UNet</a></li>
+<li>dec3&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a13537661b9d82f183cb4fb304996cc2f">MobileUNet</a>, <a class="el" href="struct_u_net.html#a11fe505a23229640ad2b731b8f650499">UNet</a></li>
+<li>dec4&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#ac3b904332d333fe17d3a7019f647206d">MobileUNet</a>, <a class="el" href="struct_u_net.html#a5bfbd941fa5963b8ec73eacf9f30d02f">UNet</a></li>
+<li>depthwise1&#160;:&#160;<a class="el" href="struct_mobile_double_conv2_d.html#a3437deeeb1da7811efafe63858651b09">MobileDoubleConv2D</a></li>
+<li>depthwise2&#160;:&#160;<a class="el" href="struct_mobile_double_conv2_d.html#a3ef82db289e66ab29cb33e2cfdd18490">MobileDoubleConv2D</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_e" name="index_e"></a>- e -</h3><ul>
-<li>enc1&#160;:&#160;<a class="el" href="struct_u_net.html#a5cbc068ec7b42470688faa1f0bc1be6c">UNet</a></li>
-<li>enc2&#160;:&#160;<a class="el" href="struct_u_net.html#ac6d09abf1612566fe70bb4de414d834a">UNet</a></li>
-<li>enc3&#160;:&#160;<a class="el" href="struct_u_net.html#a8c1a0e359b9eba9502f8044f04211044">UNet</a></li>
-<li>enc4&#160;:&#160;<a class="el" href="struct_u_net.html#a48f282e302775d7d831e2eb7b8ca8268">UNet</a></li>
+<li>enc1&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a9f1b238ac59b82a0702c46c5253c514a">MobileUNet</a>, <a class="el" href="struct_u_net.html#a5cbc068ec7b42470688faa1f0bc1be6c">UNet</a></li>
+<li>enc2&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a84938236ecc24e772f7362b58fad11a7">MobileUNet</a>, <a class="el" href="struct_u_net.html#ac6d09abf1612566fe70bb4de414d834a">UNet</a></li>
+<li>enc3&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a068d18fbeae42013e30f0e867d8b6795">MobileUNet</a>, <a class="el" href="struct_u_net.html#a8c1a0e359b9eba9502f8044f04211044">UNet</a></li>
+<li>enc4&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a99c40a4c9ec2eb7f742766f612ecafe6">MobileUNet</a>, <a class="el" href="struct_u_net.html#a48f282e302775d7d831e2eb7b8ca8268">UNet</a></li>
 <li>epsilon&#160;:&#160;<a class="el" href="struct_batch_norm2_d.html#a4bd3ad65ef63b3c3be517d66889d2141">BatchNorm2D</a></li>
 </ul>
 
@@ -167,12 +171,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <h3 class="doxsection"><a id="index_o" name="index_o"></a>- o -</h3><ul>
 <li>out_channels&#160;:&#160;<a class="el" href="struct_conv2_d.html#a1508f6e88d9d25ce4f44bdab209b5c76">Conv2D</a>, <a class="el" href="struct_conv_transpose2_d.html#a67f92dcda029bec0d3ca6fb83b3c087f">ConvTranspose2D</a></li>
-<li>out_conv&#160;:&#160;<a class="el" href="struct_u_net.html#a6be060a293021ebe328d015f3b8223be">UNet</a></li>
+<li>out_conv&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a417c1723594815e61322053a3950795f">MobileUNet</a>, <a class="el" href="struct_u_net.html#a6be060a293021ebe328d015f3b8223be">UNet</a></li>
 </ul>
 
 
 <h3 class="doxsection"><a id="index_p" name="index_p"></a>- p -</h3><ul>
 <li>padding&#160;:&#160;<a class="el" href="struct_conv2_d.html#aaa0778202c4bba624b58cfc855d51ac8">Conv2D</a></li>
+<li>pointwise1&#160;:&#160;<a class="el" href="struct_mobile_double_conv2_d.html#a7519c0fff2987e3f5e260673d945c34b">MobileDoubleConv2D</a></li>
+<li>pointwise2&#160;:&#160;<a class="el" href="struct_mobile_double_conv2_d.html#a307f46cfc31b7f1d11870f3c67923eec">MobileDoubleConv2D</a></li>
 </ul>
 
 
@@ -189,10 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <h3 class="doxsection"><a id="index_u" name="index_u"></a>- u -</h3><ul>
-<li>upconv1&#160;:&#160;<a class="el" href="struct_u_net.html#a068dd5719513761eb87f6804fa1f8bca">UNet</a></li>
-<li>upconv2&#160;:&#160;<a class="el" href="struct_u_net.html#a9dcad1923392669cf3550737f78c3fd3">UNet</a></li>
-<li>upconv3&#160;:&#160;<a class="el" href="struct_u_net.html#afe1dae4813f84c19a4dc8c7105ceb7d3">UNet</a></li>
-<li>upconv4&#160;:&#160;<a class="el" href="struct_u_net.html#aa69ac58e843826a9b85a665f1b44a988">UNet</a></li>
+<li>upconv1&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#ae29264f982b3d3b89398792300613723">MobileUNet</a>, <a class="el" href="struct_u_net.html#a068dd5719513761eb87f6804fa1f8bca">UNet</a></li>
+<li>upconv2&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#ad6e01df882553553c5566fd695a72bff">MobileUNet</a>, <a class="el" href="struct_u_net.html#a9dcad1923392669cf3550737f78c3fd3">UNet</a></li>
+<li>upconv3&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a73d7e7083a4c9238454798c3e7d0ef2b">MobileUNet</a>, <a class="el" href="struct_u_net.html#afe1dae4813f84c19a4dc8c7105ceb7d3">UNet</a></li>
+<li>upconv4&#160;:&#160;<a class="el" href="struct_mobile_u_net.html#a050706194e24689d4e9c7c6e07a3a332">MobileUNet</a>, <a class="el" href="struct_u_net.html#aa69ac58e843826a9b85a665f1b44a988">UNet</a></li>
 </ul>
 
 

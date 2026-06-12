@@ -177,18 +177,112 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="doubleconv2d_8c.html#a2da88a2376e083bc26db02da0465fe22">   58</a></span><a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* <a class="code hl_function" href="doubleconv2d_8c.html#a2da88a2376e083bc26db02da0465fe22">MobileDoubleConv2D_Create</a>(<span class="keywordtype">int</span> in_channels, <span class="keywordtype">int</span> out_channels) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* <span class="keyword">this</span> = (<a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>));</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        this-&gt;depthwise1 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(in_channels, in_channels, 3, 1, 1);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        this-&gt;bn1 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(in_channels);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        this-&gt;pointwise1 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(in_channels, out_channels, 1, 1, 0);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        this-&gt;bn2 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        this-&gt;depthwise2 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(out_channels, out_channels, 3, 1, 1);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        this-&gt;bn3 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        this-&gt;pointwise2 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(out_channels, out_channels, 1, 1, 0);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        this-&gt;bn4 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">if</span>(!this-&gt;depthwise1 || !this-&gt;bn1 || !this-&gt;pointwise1 || !this-&gt;bn2 || !this-&gt;depthwise2 || !this-&gt;bn3 || !this-&gt;pointwise2 || !this-&gt;bn4) {</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <a class="code hl_function" href="doubleconv2d_8c.html#a05efab808a0923b11aaaca93c60275e0">MobileDoubleConv2D_Destroy</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="doubleconv2d_8c.html#a05efab808a0923b11aaaca93c60275e0">   88</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="doubleconv2d_8c.html#a05efab808a0923b11aaaca93c60275e0">MobileDoubleConv2D_Destroy</a>(<a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* <span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;depthwise1);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn1);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;pointwise1);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn2);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;depthwise2);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn3);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;pointwise2);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn4);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        free(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    }</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="doubleconv2d_8c.html#a6b001954f7ea61980104044d5dc99835">  109</a></span><a class="code hl_struct" href="struct_tensor.html">Tensor</a>* <a class="code hl_function" href="doubleconv2d_8c.html#a6b001954f7ea61980104044d5dc99835">MobileDoubleConv2D_Forward</a>(<a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* <span class="keyword">this</span>, <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* input) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* x = <a class="code hl_function" href="conv2d_8c.html#ad73d94cd63a1320dce3b6cb85b0dc4fb">Conv2D_DepthwiseForward</a>(this-&gt;depthwise1, input);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn1, x);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(x);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* y = <a class="code hl_function" href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a>(this-&gt;pointwise1, x);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn2, y);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(y);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_function" href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(x);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    x = <a class="code hl_function" href="conv2d_8c.html#ad73d94cd63a1320dce3b6cb85b0dc4fb">Conv2D_DepthwiseForward</a>(this-&gt;depthwise2, y);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn3, x);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(x);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_function" href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(y);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    y = <a class="code hl_function" href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a>(this-&gt;pointwise2, x);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn4, y);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(y);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_function" href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(x);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">return</span> y;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>}</div>
+</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="ttc" id="abatchnorm2d_8c_html_a5e0ceb515ec274feecc67724a3ff3e68"><div class="ttname"><a href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a></div><div class="ttdeci">BatchNorm2D * BatchNorm2D_Create(int channels)</div><div class="ttdoc">Crea e inicializa una capa BatchNorm2D.</div><div class="ttdef"><b>Definition</b> <a href="batchnorm2d_8c_source.html#l00004">batchnorm2d.c:4</a></div></div>
 <div class="ttc" id="abatchnorm2d_8c_html_abc929084b71fdbb1f9f2340a52fff794"><div class="ttname"><a href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a></div><div class="ttdeci">void BatchNorm2D_Destroy(BatchNorm2D *this)</div><div class="ttdoc">Libera la memoria asociada a una capa BatchNorm2D.</div><div class="ttdef"><b>Definition</b> <a href="batchnorm2d_8c_source.html#l00046">batchnorm2d.c:46</a></div></div>
 <div class="ttc" id="abatchnorm2d_8c_html_afc9d3f3f62c106f45787972d6aa97759"><div class="ttname"><a href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a></div><div class="ttdeci">void BatchNorm2D_Forward(BatchNorm2D *this, Tensor *x)</div><div class="ttdoc">Aplica Batch Normalization sobre un tensor.</div><div class="ttdef"><b>Definition</b> <a href="batchnorm2d_8c_source.html#l00061">batchnorm2d.c:61</a></div></div>
 <div class="ttc" id="aconv2d_8c_html_a42ed1332a0bc8a8ce73d791d289a4bcd"><div class="ttname"><a href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a></div><div class="ttdeci">Tensor * Conv2D_Forward(Conv2D *this, Tensor *input)</div><div class="ttdoc">Ejecuta la propagación de la convolución.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00056">conv2d.c:56</a></div></div>
 <div class="ttc" id="aconv2d_8c_html_a489f5ef1a69d3044a14bbe60613fc677"><div class="ttname"><a href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a></div><div class="ttdeci">Conv2D * Conv2D_Create(int in_channels, int out_channels, int kernel_size, int stride, int padding)</div><div class="ttdoc">Crea e inicializa una capa Conv2D.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00003">conv2d.c:3</a></div></div>
 <div class="ttc" id="aconv2d_8c_html_ac503e98f3f9b3d5c470d0206168bd700"><div class="ttname"><a href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a></div><div class="ttdeci">void Conv2D_Destroy(Conv2D *this)</div><div class="ttdoc">Libera la memoria asociada a una capa Conv2D.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00045">conv2d.c:45</a></div></div>
+<div class="ttc" id="aconv2d_8c_html_ad73d94cd63a1320dce3b6cb85b0dc4fb"><div class="ttname"><a href="conv2d_8c.html#ad73d94cd63a1320dce3b6cb85b0dc4fb">Conv2D_DepthwiseForward</a></div><div class="ttdeci">Tensor * Conv2D_DepthwiseForward(Conv2D *this, Tensor *input)</div><div class="ttdoc">Ejecuta una convolución depthwise sobre un tensor.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00120">conv2d.c:120</a></div></div>
+<div class="ttc" id="adoubleconv2d_8c_html_a05efab808a0923b11aaaca93c60275e0"><div class="ttname"><a href="doubleconv2d_8c.html#a05efab808a0923b11aaaca93c60275e0">MobileDoubleConv2D_Destroy</a></div><div class="ttdeci">void MobileDoubleConv2D_Destroy(MobileDoubleConv2D *this)</div><div class="ttdoc">Libera la memoria asociada a un bloque MobileDoubleConv2D.</div><div class="ttdef"><b>Definition</b> <a href="#l00088">doubleconv2d.c:88</a></div></div>
 <div class="ttc" id="adoubleconv2d_8c_html_a1f87e39f290dd2a7f0f96e79c3af9be0"><div class="ttname"><a href="doubleconv2d_8c.html#a1f87e39f290dd2a7f0f96e79c3af9be0">DoubleConv2D_Create</a></div><div class="ttdeci">DoubleConv2D * DoubleConv2D_Create(int in_channels, int out_channels)</div><div class="ttdoc">Crea e inicializa un bloque DoubleConv2D.</div><div class="ttdef"><b>Definition</b> <a href="#l00003">doubleconv2d.c:3</a></div></div>
+<div class="ttc" id="adoubleconv2d_8c_html_a2da88a2376e083bc26db02da0465fe22"><div class="ttname"><a href="doubleconv2d_8c.html#a2da88a2376e083bc26db02da0465fe22">MobileDoubleConv2D_Create</a></div><div class="ttdeci">MobileDoubleConv2D * MobileDoubleConv2D_Create(int in_channels, int out_channels)</div><div class="ttdoc">Crea e inicializa un bloque MobileDoubleConv2D.</div><div class="ttdef"><b>Definition</b> <a href="#l00058">doubleconv2d.c:58</a></div></div>
+<div class="ttc" id="adoubleconv2d_8c_html_a6b001954f7ea61980104044d5dc99835"><div class="ttname"><a href="doubleconv2d_8c.html#a6b001954f7ea61980104044d5dc99835">MobileDoubleConv2D_Forward</a></div><div class="ttdeci">Tensor * MobileDoubleConv2D_Forward(MobileDoubleConv2D *this, Tensor *input)</div><div class="ttdoc">Ejecuta la propagación hacia adelante del bloque.</div><div class="ttdef"><b>Definition</b> <a href="#l00109">doubleconv2d.c:109</a></div></div>
 <div class="ttc" id="adoubleconv2d_8c_html_aaf98af8e5fee3930b7431f55068773a7"><div class="ttname"><a href="doubleconv2d_8c.html#aaf98af8e5fee3930b7431f55068773a7">DoubleConv2D_Forward</a></div><div class="ttdeci">Tensor * DoubleConv2D_Forward(DoubleConv2D *this, Tensor *input)</div><div class="ttdoc">Ejecuta la propagación hacia adelante del bloque.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">doubleconv2d.c:39</a></div></div>
 <div class="ttc" id="adoubleconv2d_8c_html_aeb271a7f6c27ef05c59f685d1485c55c"><div class="ttname"><a href="doubleconv2d_8c.html#aeb271a7f6c27ef05c59f685d1485c55c">DoubleConv2D_Destroy</a></div><div class="ttdeci">void DoubleConv2D_Destroy(DoubleConv2D *this)</div><div class="ttdoc">Libera la memoria asociada a un bloque DoubleConv2D.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">doubleconv2d.c:26</a></div></div>
 <div class="ttc" id="adoubleconv2d_8h_html"><div class="ttname"><a href="doubleconv2d_8h.html">doubleconv2d.h</a></div><div class="ttdoc">Definición del bloque Double Convolution 2D.</div></div>
 <div class="ttc" id="arelu_8c_html_abcc9691e8acc8ce9c3b7782bcb7ed16e"><div class="ttname"><a href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a></div><div class="ttdeci">void ReLU_Forward(Tensor *x)</div><div class="ttdoc">Aplica la función de activación ReLU sobre un tensor.</div><div class="ttdef"><b>Definition</b> <a href="relu_8c_source.html#l00003">relu.c:3</a></div></div>
 <div class="ttc" id="astruct_double_conv2_d_html"><div class="ttname"><a href="struct_double_conv2_d.html">DoubleConv2D</a></div><div class="ttdoc">Representa un bloque de doble convolución.</div><div class="ttdef"><b>Definition</b> <a href="doubleconv2d_8h_source.html#l00028">doubleconv2d.h:29</a></div></div>
+<div class="ttc" id="astruct_mobile_double_conv2_d_html"><div class="ttname"><a href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a></div><div class="ttdef"><b>Definition</b> <a href="doubleconv2d_8h_source.html#l00088">doubleconv2d.h:89</a></div></div>
 <div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
 <div class="ttc" id="atensor_8c_html_a86cdfda666446e1d88312b5c3b682569"><div class="ttname"><a href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a></div><div class="ttdeci">void Tensor_Destroy(Tensor *this)</div><div class="ttdoc">Libera la memoria asociada a un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00030">tensor.c:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

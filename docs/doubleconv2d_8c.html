@@ -128,6 +128,12 @@ Funciones</h2></td></tr>
 <tr class="memdesc:aeb271a7f6c27ef05c59f685d1485c55c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria asociada a un bloque <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a>.  <br /></td></tr>
 <tr class="memitem:aaf98af8e5fee3930b7431f55068773a7" id="r_aaf98af8e5fee3930b7431f55068773a7"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aaf98af8e5fee3930b7431f55068773a7">DoubleConv2D_Forward</a> (<a class="el" href="struct_double_conv2_d.html">DoubleConv2D</a> *this, <a class="el" href="struct_tensor.html">Tensor</a> *input)</td></tr>
 <tr class="memdesc:aaf98af8e5fee3930b7431f55068773a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la propagación hacia adelante del bloque.  <br /></td></tr>
+<tr class="memitem:a2da88a2376e083bc26db02da0465fe22" id="r_a2da88a2376e083bc26db02da0465fe22"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a2da88a2376e083bc26db02da0465fe22">MobileDoubleConv2D_Create</a> (int in_channels, int out_channels)</td></tr>
+<tr class="memdesc:a2da88a2376e083bc26db02da0465fe22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea e inicializa un bloque <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>.  <br /></td></tr>
+<tr class="memitem:a05efab808a0923b11aaaca93c60275e0" id="r_a05efab808a0923b11aaaca93c60275e0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a05efab808a0923b11aaaca93c60275e0">MobileDoubleConv2D_Destroy</a> (<a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *this)</td></tr>
+<tr class="memdesc:a05efab808a0923b11aaaca93c60275e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera la memoria asociada a un bloque <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>.  <br /></td></tr>
+<tr class="memitem:a6b001954f7ea61980104044d5dc99835" id="r_a6b001954f7ea61980104044d5dc99835"><td class="memItemLeft"><a class="el" href="struct_tensor.html">Tensor</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a6b001954f7ea61980104044d5dc99835">MobileDoubleConv2D_Forward</a> (<a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *this, <a class="el" href="struct_tensor.html">Tensor</a> *input)</td></tr>
+<tr class="memdesc:a6b001954f7ea61980104044d5dc99835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta la propagación hacia adelante del bloque.  <br /></td></tr>
 </table>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
 <a id="a1f87e39f290dd2a7f0f96e79c3af9be0" name="a1f87e39f290dd2a7f0f96e79c3af9be0"></a>
@@ -293,6 +299,189 @@ Funciones</h2></td></tr>
 <div class="ttc" id="arelu_8c_html_abcc9691e8acc8ce9c3b7782bcb7ed16e"><div class="ttname"><a href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a></div><div class="ttdeci">void ReLU_Forward(Tensor *x)</div><div class="ttdoc">Aplica la función de activación ReLU sobre un tensor.</div><div class="ttdef"><b>Definition</b> <a href="relu_8c_source.html#l00003">relu.c:3</a></div></div>
 <div class="ttc" id="astruct_tensor_html"><div class="ttname"><a href="struct_tensor.html">Tensor</a></div><div class="ttdoc">Representa un tensor tridimensional.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8h_source.html#l00035">tensor.h:36</a></div></div>
 <div class="ttc" id="atensor_8c_html_a86cdfda666446e1d88312b5c3b682569"><div class="ttname"><a href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a></div><div class="ttdeci">void Tensor_Destroy(Tensor *this)</div><div class="ttdoc">Libera la memoria asociada a un tensor.</div><div class="ttdef"><b>Definition</b> <a href="tensor_8c_source.html#l00030">tensor.c:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2da88a2376e083bc26db02da0465fe22" name="a2da88a2376e083bc26db02da0465fe22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2da88a2376e083bc26db02da0465fe22">&#9670;&#160;</a></span>MobileDoubleConv2D_Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> * MobileDoubleConv2D_Create </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>in_channels</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>out_channels</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Crea e inicializa un bloque <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>. </p>
+<p>Inicializa dos bloques de convolución depthwise separable compuestos por convoluciones depthwise, pointwise y capas Batch Normalization.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_channels</td><td>Número de canales de entrada. </td></tr>
+    <tr><td class="paramname">out_channels</td><td>Número de canales de salida.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Puntero al bloque <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> creado. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error de memoria. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="doubleconv2d_8c_source.html#l00058">58</a> del archivo <a class="el" href="doubleconv2d_8c_source.html">doubleconv2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   58</span>                                                                                 {</div>
+<div class="line"><span class="lineno">   59</span> </div>
+<div class="line"><span class="lineno">   60</span>    <a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* <span class="keyword">this</span> = (<a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>*)malloc(<span class="keyword">sizeof</span>(<a class="code hl_struct" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>));</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>        this-&gt;depthwise1 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(in_channels, in_channels, 3, 1, 1);</div>
+<div class="line"><span class="lineno">   65</span>        this-&gt;bn1 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(in_channels);</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>        this-&gt;pointwise1 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(in_channels, out_channels, 1, 1, 0);</div>
+<div class="line"><span class="lineno">   68</span>        this-&gt;bn2 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><span class="lineno">   69</span> </div>
+<div class="line"><span class="lineno">   70</span>        this-&gt;depthwise2 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(out_channels, out_channels, 3, 1, 1);</div>
+<div class="line"><span class="lineno">   71</span>        this-&gt;bn3 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>        this-&gt;pointwise2 = <a class="code hl_function" href="conv2d_8c.html#a489f5ef1a69d3044a14bbe60613fc677">Conv2D_Create</a>(out_channels, out_channels, 1, 1, 0);</div>
+<div class="line"><span class="lineno">   74</span>        this-&gt;bn4 = <a class="code hl_function" href="batchnorm2d_8c.html#a5e0ceb515ec274feecc67724a3ff3e68">BatchNorm2D_Create</a>(out_channels);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>        <span class="keywordflow">if</span>(!this-&gt;depthwise1 || !this-&gt;bn1 || !this-&gt;pointwise1 || !this-&gt;bn2 || !this-&gt;depthwise2 || !this-&gt;bn3 || !this-&gt;pointwise2 || !this-&gt;bn4) {</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>            <a class="code hl_function" href="#a05efab808a0923b11aaaca93c60275e0">MobileDoubleConv2D_Destroy</a>(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   79</span> </div>
+<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">   81</span>        }</div>
+<div class="line"><span class="lineno">   82</span>    }</div>
+<div class="line"><span class="lineno">   83</span> </div>
+<div class="line"><span class="lineno">   84</span>    <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">   85</span>}</div>
+<div class="ttc" id="adoubleconv2d_8c_html_a05efab808a0923b11aaaca93c60275e0"><div class="ttname"><a href="#a05efab808a0923b11aaaca93c60275e0">MobileDoubleConv2D_Destroy</a></div><div class="ttdeci">void MobileDoubleConv2D_Destroy(MobileDoubleConv2D *this)</div><div class="ttdoc">Libera la memoria asociada a un bloque MobileDoubleConv2D.</div><div class="ttdef"><b>Definition</b> <a href="doubleconv2d_8c_source.html#l00088">doubleconv2d.c:88</a></div></div>
+<div class="ttc" id="astruct_mobile_double_conv2_d_html"><div class="ttname"><a href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a></div><div class="ttdef"><b>Definition</b> <a href="doubleconv2d_8h_source.html#l00088">doubleconv2d.h:89</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a05efab808a0923b11aaaca93c60275e0" name="a05efab808a0923b11aaaca93c60275e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05efab808a0923b11aaaca93c60275e0">&#9670;&#160;</a></span>MobileDoubleConv2D_Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MobileDoubleConv2D_Destroy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera la memoria asociada a un bloque <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al bloque <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="doubleconv2d_8c_source.html#l00088">88</a> del archivo <a class="el" href="doubleconv2d_8c_source.html">doubleconv2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   88</span>                                                          {</div>
+<div class="line"><span class="lineno">   89</span> </div>
+<div class="line"><span class="lineno">   90</span>    <span class="keywordflow">if</span>(<span class="keyword">this</span>) {</div>
+<div class="line"><span class="lineno">   91</span> </div>
+<div class="line"><span class="lineno">   92</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;depthwise1);</div>
+<div class="line"><span class="lineno">   93</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn1);</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;pointwise1);</div>
+<div class="line"><span class="lineno">   96</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn2);</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;depthwise2);</div>
+<div class="line"><span class="lineno">   99</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn3);</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <a class="code hl_function" href="conv2d_8c.html#ac503e98f3f9b3d5c470d0206168bd700">Conv2D_Destroy</a>(this-&gt;pointwise2);</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_function" href="batchnorm2d_8c.html#abc929084b71fdbb1f9f2340a52fff794">BatchNorm2D_Destroy</a>(this-&gt;bn4);</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>        free(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">  105</span>    }</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6b001954f7ea61980104044d5dc99835" name="a6b001954f7ea61980104044d5dc99835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b001954f7ea61980104044d5dc99835">&#9670;&#160;</a></span>MobileDoubleConv2D_Forward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_tensor.html">Tensor</a> * MobileDoubleConv2D_Forward </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *</td>          <td class="paramname"><span class="paramname"><em>this</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_tensor.html">Tensor</a> *</td>          <td class="paramname"><span class="paramname"><em>input</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ejecuta la propagación hacia adelante del bloque. </p>
+<p>Aplica dos convoluciones depthwise separables consecutivas sobre el tensor de entrada.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">this</td><td>Puntero al bloque <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>. </td></tr>
+    <tr><td class="paramname">input</td><td><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de entrada.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="struct_tensor.html" title="Representa un tensor tridimensional.">Tensor</a> de salida procesado. </dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>Si ocurre un error durante la operación. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="doubleconv2d_8c_source.html#l00109">109</a> del archivo <a class="el" href="doubleconv2d_8c_source.html">doubleconv2d.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>                                                                            {</div>
+<div class="line"><span class="lineno">  110</span> </div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* x = <a class="code hl_function" href="conv2d_8c.html#ad73d94cd63a1320dce3b6cb85b0dc4fb">Conv2D_DepthwiseForward</a>(this-&gt;depthwise1, input);</div>
+<div class="line"><span class="lineno">  112</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn1, x);</div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(x);</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    <a class="code hl_struct" href="struct_tensor.html">Tensor</a>* y = <a class="code hl_function" href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a>(this-&gt;pointwise1, x);</div>
+<div class="line"><span class="lineno">  116</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn2, y);</div>
+<div class="line"><span class="lineno">  117</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(y);</div>
+<div class="line"><span class="lineno">  118</span> </div>
+<div class="line"><span class="lineno">  119</span>    <a class="code hl_function" href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(x);</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>    x = <a class="code hl_function" href="conv2d_8c.html#ad73d94cd63a1320dce3b6cb85b0dc4fb">Conv2D_DepthwiseForward</a>(this-&gt;depthwise2, y);</div>
+<div class="line"><span class="lineno">  122</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn3, x);</div>
+<div class="line"><span class="lineno">  123</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(x);</div>
+<div class="line"><span class="lineno">  124</span> </div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_function" href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(y);</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>    y = <a class="code hl_function" href="conv2d_8c.html#a42ed1332a0bc8a8ce73d791d289a4bcd">Conv2D_Forward</a>(this-&gt;pointwise2, x);</div>
+<div class="line"><span class="lineno">  128</span>    <a class="code hl_function" href="batchnorm2d_8c.html#afc9d3f3f62c106f45787972d6aa97759">BatchNorm2D_Forward</a>(this-&gt;bn4, y);</div>
+<div class="line"><span class="lineno">  129</span>    <a class="code hl_function" href="relu_8c.html#abcc9691e8acc8ce9c3b7782bcb7ed16e">ReLU_Forward</a>(y);</div>
+<div class="line"><span class="lineno">  130</span> </div>
+<div class="line"><span class="lineno">  131</span>    <a class="code hl_function" href="tensor_8c.html#a86cdfda666446e1d88312b5c3b682569">Tensor_Destroy</a>(x);</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    <span class="keywordflow">return</span> y;</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+<div class="ttc" id="aconv2d_8c_html_ad73d94cd63a1320dce3b6cb85b0dc4fb"><div class="ttname"><a href="conv2d_8c.html#ad73d94cd63a1320dce3b6cb85b0dc4fb">Conv2D_DepthwiseForward</a></div><div class="ttdeci">Tensor * Conv2D_DepthwiseForward(Conv2D *this, Tensor *input)</div><div class="ttdoc">Ejecuta una convolución depthwise sobre un tensor.</div><div class="ttdef"><b>Definition</b> <a href="conv2d_8c_source.html#l00120">conv2d.c:120</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

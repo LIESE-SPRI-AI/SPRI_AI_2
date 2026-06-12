@@ -1,0 +1,436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.17.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WildFire: Referencia de la estructura MobileUNet</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">var page_layout=1;</script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', init_search);
+</script>
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default';
+mermaid.initialize({ startOnLoad: true, theme: theme });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="side-nav" class="ui-resizable side-nav-resizable"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WildFire
+   </div>
+  </td>
+ </tr>
+   <tr><td colspan="2">        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon" onmouseover="return searchBox.OnSearchSelectShow()" onmouseout="return searchBox.OnSearchSelectHide()"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+</td></tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.17.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+</div><!-- top -->
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('struct_mobile_u_net.html','',''); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  initMenu('',true);
+});
+</script>
+<div id="main-nav-mobile">
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2" style="float:right">
+    </li>
+  </ul>
+</div><!-- main-nav -->
+<div id="container"><div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la estructura MobileUNet</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación de una U-Net basada en convoluciones separables.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="unet_8h_source.html">unet.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Campos de datos</h2></td></tr>
+<tr class="memitem:a9f1b238ac59b82a0702c46c5253c514a" id="r_a9f1b238ac59b82a0702c46c5253c514a"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f1b238ac59b82a0702c46c5253c514a">enc1</a></td></tr>
+<tr class="memdesc:a9f1b238ac59b82a0702c46c5253c514a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Primer bloque del encoder.  <br /></td></tr>
+<tr class="memitem:a84938236ecc24e772f7362b58fad11a7" id="r_a84938236ecc24e772f7362b58fad11a7"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a84938236ecc24e772f7362b58fad11a7">enc2</a></td></tr>
+<tr class="memdesc:a84938236ecc24e772f7362b58fad11a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Segundo bloque del encoder.  <br /></td></tr>
+<tr class="memitem:a068d18fbeae42013e30f0e867d8b6795" id="r_a068d18fbeae42013e30f0e867d8b6795"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a068d18fbeae42013e30f0e867d8b6795">enc3</a></td></tr>
+<tr class="memdesc:a068d18fbeae42013e30f0e867d8b6795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tercer bloque del encoder.  <br /></td></tr>
+<tr class="memitem:a99c40a4c9ec2eb7f742766f612ecafe6" id="r_a99c40a4c9ec2eb7f742766f612ecafe6"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a99c40a4c9ec2eb7f742766f612ecafe6">enc4</a></td></tr>
+<tr class="memdesc:a99c40a4c9ec2eb7f742766f612ecafe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cuarto bloque del encoder.  <br /></td></tr>
+<tr class="memitem:a388ae22ba08511ab7da629a25c17c04b" id="r_a388ae22ba08511ab7da629a25c17c04b"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a388ae22ba08511ab7da629a25c17c04b">bottleneck</a></td></tr>
+<tr class="memdesc:a388ae22ba08511ab7da629a25c17c04b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bloque central de la red.  <br /></td></tr>
+<tr class="memitem:a050706194e24689d4e9c7c6e07a3a332" id="r_a050706194e24689d4e9c7c6e07a3a332"><td class="memItemLeft"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a050706194e24689d4e9c7c6e07a3a332">upconv4</a></td></tr>
+<tr class="memdesc:a050706194e24689d4e9c7c6e07a3a332"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolución transpuesta del nivel 4.  <br /></td></tr>
+<tr class="memitem:ac3b904332d333fe17d3a7019f647206d" id="r_ac3b904332d333fe17d3a7019f647206d"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ac3b904332d333fe17d3a7019f647206d">dec4</a></td></tr>
+<tr class="memdesc:ac3b904332d333fe17d3a7019f647206d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bloque decodificador del nivel 4.  <br /></td></tr>
+<tr class="memitem:a73d7e7083a4c9238454798c3e7d0ef2b" id="r_a73d7e7083a4c9238454798c3e7d0ef2b"><td class="memItemLeft"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a73d7e7083a4c9238454798c3e7d0ef2b">upconv3</a></td></tr>
+<tr class="memdesc:a73d7e7083a4c9238454798c3e7d0ef2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolución transpuesta del nivel 3.  <br /></td></tr>
+<tr class="memitem:a13537661b9d82f183cb4fb304996cc2f" id="r_a13537661b9d82f183cb4fb304996cc2f"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a13537661b9d82f183cb4fb304996cc2f">dec3</a></td></tr>
+<tr class="memdesc:a13537661b9d82f183cb4fb304996cc2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bloque decodificador del nivel 3.  <br /></td></tr>
+<tr class="memitem:ad6e01df882553553c5566fd695a72bff" id="r_ad6e01df882553553c5566fd695a72bff"><td class="memItemLeft"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ad6e01df882553553c5566fd695a72bff">upconv2</a></td></tr>
+<tr class="memdesc:ad6e01df882553553c5566fd695a72bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolución transpuesta del nivel 2.  <br /></td></tr>
+<tr class="memitem:a0d17d4c7be2a5b11d4a5d000e143410d" id="r_a0d17d4c7be2a5b11d4a5d000e143410d"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a0d17d4c7be2a5b11d4a5d000e143410d">dec2</a></td></tr>
+<tr class="memdesc:a0d17d4c7be2a5b11d4a5d000e143410d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bloque decodificador del nivel 2.  <br /></td></tr>
+<tr class="memitem:ae29264f982b3d3b89398792300613723" id="r_ae29264f982b3d3b89398792300613723"><td class="memItemLeft"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ae29264f982b3d3b89398792300613723">upconv1</a></td></tr>
+<tr class="memdesc:ae29264f982b3d3b89398792300613723"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolución transpuesta del nivel 1.  <br /></td></tr>
+<tr class="memitem:aa656394841d2882454e863ea1abdabe2" id="r_aa656394841d2882454e863ea1abdabe2"><td class="memItemLeft"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#aa656394841d2882454e863ea1abdabe2">dec1</a></td></tr>
+<tr class="memdesc:aa656394841d2882454e863ea1abdabe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bloque decodificador del nivel 1.  <br /></td></tr>
+<tr class="memitem:a417c1723594815e61322053a3950795f" id="r_a417c1723594815e61322053a3950795f"><td class="memItemLeft"><a class="el" href="struct_conv2_d.html">Conv2D</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a417c1723594815e61322053a3950795f">out_conv</a></td></tr>
+<tr class="memdesc:a417c1723594815e61322053a3950795f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capa convolucional de salida.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación de una U-Net basada en convoluciones separables. </p>
+<p>Esta arquitectura reemplaza los bloques <a class="el" href="struct_double_conv2_d.html" title="Representa un bloque de doble convolución.">DoubleConv2D</a> convencionales por bloques <a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>, reduciendo significativamente el número de parámetros y operaciones requeridas durante la inferencia.</p>
+<p>La red está compuesta por una ruta de codificación (encoder), un cuello de botella (bottleneck) y una ruta de decodificación (decoder) con conexiones de salto (skip connections). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00154">154</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de campos</h2>
+<a id="a388ae22ba08511ab7da629a25c17c04b" name="a388ae22ba08511ab7da629a25c17c04b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a388ae22ba08511ab7da629a25c17c04b">&#9670;&#160;</a></span>bottleneck</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::bottleneck</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bloque central de la red. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00179">179</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="aa656394841d2882454e863ea1abdabe2" name="aa656394841d2882454e863ea1abdabe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa656394841d2882454e863ea1abdabe2">&#9670;&#160;</a></span>dec1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::dec1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bloque decodificador del nivel 1. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00219">219</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a0d17d4c7be2a5b11d4a5d000e143410d" name="a0d17d4c7be2a5b11d4a5d000e143410d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d17d4c7be2a5b11d4a5d000e143410d">&#9670;&#160;</a></span>dec2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::dec2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bloque decodificador del nivel 2. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00209">209</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a13537661b9d82f183cb4fb304996cc2f" name="a13537661b9d82f183cb4fb304996cc2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13537661b9d82f183cb4fb304996cc2f">&#9670;&#160;</a></span>dec3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::dec3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bloque decodificador del nivel 3. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00199">199</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="ac3b904332d333fe17d3a7019f647206d" name="ac3b904332d333fe17d3a7019f647206d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b904332d333fe17d3a7019f647206d">&#9670;&#160;</a></span>dec4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::dec4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bloque decodificador del nivel 4. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00189">189</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a9f1b238ac59b82a0702c46c5253c514a" name="a9f1b238ac59b82a0702c46c5253c514a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f1b238ac59b82a0702c46c5253c514a">&#9670;&#160;</a></span>enc1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::enc1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Primer bloque del encoder. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00159">159</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a84938236ecc24e772f7362b58fad11a7" name="a84938236ecc24e772f7362b58fad11a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84938236ecc24e772f7362b58fad11a7">&#9670;&#160;</a></span>enc2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::enc2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Segundo bloque del encoder. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00164">164</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a068d18fbeae42013e30f0e867d8b6795" name="a068d18fbeae42013e30f0e867d8b6795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a068d18fbeae42013e30f0e867d8b6795">&#9670;&#160;</a></span>enc3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::enc3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tercer bloque del encoder. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00169">169</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a99c40a4c9ec2eb7f742766f612ecafe6" name="a99c40a4c9ec2eb7f742766f612ecafe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c40a4c9ec2eb7f742766f612ecafe6">&#9670;&#160;</a></span>enc4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_mobile_double_conv2_d.html">MobileDoubleConv2D</a>* MobileUNet::enc4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cuarto bloque del encoder. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00174">174</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a417c1723594815e61322053a3950795f" name="a417c1723594815e61322053a3950795f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417c1723594815e61322053a3950795f">&#9670;&#160;</a></span>out_conv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_conv2_d.html">Conv2D</a>* MobileUNet::out_conv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Capa convolucional de salida. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00224">224</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="ae29264f982b3d3b89398792300613723" name="ae29264f982b3d3b89398792300613723"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29264f982b3d3b89398792300613723">&#9670;&#160;</a></span>upconv1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* MobileUNet::upconv1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convolución transpuesta del nivel 1. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00214">214</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="ad6e01df882553553c5566fd695a72bff" name="ad6e01df882553553c5566fd695a72bff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6e01df882553553c5566fd695a72bff">&#9670;&#160;</a></span>upconv2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* MobileUNet::upconv2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convolución transpuesta del nivel 2. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00204">204</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a73d7e7083a4c9238454798c3e7d0ef2b" name="a73d7e7083a4c9238454798c3e7d0ef2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d7e7083a4c9238454798c3e7d0ef2b">&#9670;&#160;</a></span>upconv3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* MobileUNet::upconv3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convolución transpuesta del nivel 3. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00194">194</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<a id="a050706194e24689d4e9c7c6e07a3a332" name="a050706194e24689d4e9c7c6e07a3a332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a050706194e24689d4e9c7c6e07a3a332">&#9670;&#160;</a></span>upconv4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_conv_transpose2_d.html">ConvTranspose2D</a>* MobileUNet::upconv4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Convolución transpuesta del nivel 4. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="unet_8h_source.html#l00184">184</a> del archivo <a class="el" href="unet_8h_source.html">unet.h</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta estructura está generada del siguiente archivo:<ul>
+<li>inc/nn/<a class="el" href="unet_8h_source.html">unet.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="struct_mobile_u_net.html">MobileUNet</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
+  </ul>
+</div>
+</body>
+</html>
